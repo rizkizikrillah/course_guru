@@ -129,5 +129,6 @@ class CourseController extends Controller
             ]);
             return response()->json(['error' => 'Failed to mark course complete'], 500);
         }
+        
     }
 }

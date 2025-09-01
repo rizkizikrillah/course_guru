@@ -18,16 +18,6 @@
             {!! $content ?? '<p class="text-gray-500">Silakan pilih sub bab dari halaman disamping untuk melihat konten.</p>' !!}
         </div>
 
-        @auth
-            @if(!empty($course))
-                <form action="{{ route('course.complete', $course->id) }}" method="POST">
-                    @csrf
-                    <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
-                        ✅ Tandai Selesai
-                    </button>
-                </form>
-            @endif
-        @endauth
 
         {{-- Link ke dokumen --}}
         @if(!empty($link))
@@ -47,11 +37,6 @@
                     class="px-4 py-2 rounded-lg hover:bg-gray-300
                         {{ in_array($prevCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700' }}">
                     ← {{ $prevCourse->title }}
-                    @if(!in_array($prevCourse->id, $completedCourses))
-                        <span class="text-sm ml-1">(Belum selesai)</span>
-                    @else
-                        <span class="text-sm ml-1">✅</span>
-                    @endif
                 </a>
             @else
                 <span></span>
@@ -63,11 +48,6 @@
                     class="px-4 py-2 rounded-lg hover:bg-blue-700
                         {{ in_array($nextCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-300 text-gray-600' }}">
                     {{ $nextCourse->title }} →
-                    @if(!in_array($nextCourse->id, $completedCourses))
-                        <span class="text-sm ml-1">(Belum selesai)</span>
-                    @else
-                        <span class="text-sm ml-1">✅</span>
-                    @endif
                 </a>
             @endisset
         </div>
