@@ -15,7 +15,16 @@
             @endif
 
             {{-- Konten utama course --}}
-            {!! $content ?? '<p class="text-gray-500">Silakan pilih bab di halaman samping.</p>' !!}
+            {!! $content ?? '<p>
+Setelah Anda membaca materi, menonton video, mengerjakan aktivitas, dan memahami seluruh isi pembelajaran dalam bab ini, silakan lanjutkan dengan Latihan Pemahaman sebagai bentuk penyelesaian dan penguatan kompetensi pada bab ini.</p>
+                <p>Latihan ini bertujuan untuk:<p/>
+            <ol>
+                <li>(1) Mengukur tingkat pemahaman Anda terhadap konsep yang telah dipelajari.</li>
+                <li>(2) Melatih penerapan pengetahuan pada konteks nyata di kelas SMK.</li>
+                <li>(3) Menjadi dasar refleksi dan persiapan menuju bab berikutnya.</li>
+            </ol> 
+            <p>
+👉 Kerjakan Latihan Pemahaman dengan sungguh-sungguh sebagai penutup bab ini.</p>'!!}
         </div>
 
 
@@ -35,7 +44,7 @@
             @isset($prevCourse)
                 <a href="{{ route('course.show', [$prevCourse->section, $prevCourse->slug]) }}"
                     class="px-4 py-2 rounded-lg hover:bg-gray-300
-                            {{ in_array($prevCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700' }}">
+                                        {{ in_array($prevCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700' }}">
                     ← {{ $prevCourse->title }}
                 </a>
             @else
@@ -46,7 +55,7 @@
             @isset($nextCourse)
                 <a href="{{ route('course.show', [$nextCourse->section, $nextCourse->slug]) }}"
                     class="px-4 py-2 rounded-lg hover:bg-blue-700
-                            {{ in_array($nextCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-300 text-gray-600' }}">
+                                        {{ in_array($nextCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-300 text-gray-600' }}">
                     {{ $nextCourse->title }} →
                 </a>
             @endisset

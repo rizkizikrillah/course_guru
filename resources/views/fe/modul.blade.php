@@ -4,9 +4,9 @@
     <div class="max-w-4xl mx-auto p-6">
         <h1 class="text-xl font-bold mb-2 flex items-center">
             <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center mr-2">1</span>
-            Pelajari Modul
+            PPG (Pendidikan Profesi Guru)
+            {{-- <span class="text-blue-500 ml-2">PPG</span> --}}
         </h1>
-        <p class="mb-6 text-gray-600">Selesaikan modul-modul di bawah dan unggah Jurnal Pembelajaran Anda.</p>
 
         <div class="space-y-4">
             @foreach ($moduls as $modul)
