@@ -25,7 +25,7 @@ class CourseController extends Controller
             ? round(count($completedCourses) / $courses->count() * 100)
             : 0;
 
-        return view('fe.course', [
+        return view('fe.course1.course', [
             'courses' => $courses,
             'groupedCourses' => $groupedCourses,
             'progressPercent' => $progressPercent,
@@ -62,7 +62,7 @@ class CourseController extends Controller
             ? round(count($completedCourses) / $courses->count() * 100)
             : 0;
 
-        return view('fe.course', [
+        return view('fe.course1.course', [
             'course' => $course,
             'courses' => $courses,
             'groupedCourses' => $courses->groupBy('section'),
@@ -129,6 +129,6 @@ class CourseController extends Controller
             ]);
             return response()->json(['error' => 'Failed to mark course complete'], 500);
         }
-        
+
     }
 }

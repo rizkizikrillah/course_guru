@@ -15,7 +15,7 @@
             @endif
 
             {{-- Konten utama course --}}
-            {!! $content ?? '<p class="text-gray-500">Silakan pilih sub bab dari halaman disamping untuk melihat konten.</p>' !!}
+            {!! $content ?? '<p class="text-gray-500">Silakan pilih bab di halaman samping.</p>' !!}
         </div>
 
 
@@ -35,7 +35,7 @@
             @isset($prevCourse)
                 <a href="{{ route('course.show', [$prevCourse->section, $prevCourse->slug]) }}"
                     class="px-4 py-2 rounded-lg hover:bg-gray-300
-                        {{ in_array($prevCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700' }}">
+                            {{ in_array($prevCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700' }}">
                     ← {{ $prevCourse->title }}
                 </a>
             @else
@@ -46,7 +46,7 @@
             @isset($nextCourse)
                 <a href="{{ route('course.show', [$nextCourse->section, $nextCourse->slug]) }}"
                     class="px-4 py-2 rounded-lg hover:bg-blue-700
-                        {{ in_array($nextCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-300 text-gray-600' }}">
+                            {{ in_array($nextCourse->id, $completedCourses) ? 'bg-blue-600 text-white' : 'bg-gray-300 text-gray-600' }}">
                     {{ $nextCourse->title }} →
                 </a>
             @endisset

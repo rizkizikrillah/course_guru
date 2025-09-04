@@ -27,7 +27,7 @@ class CourseSeeder extends Seeder
         // : Introduction
         // =======================
         Course::create([
-            'section' => 'introduction',
+            'section' => 'Bab I: Introduction',
             'slug' => 'prinsip-pembelajaran',
             'title' => 'Prinsip Pembelajaran',
             'content' => '<ol class="pl-5 space-y-2">
@@ -44,16 +44,17 @@ class CourseSeeder extends Seeder
         // BAB 1: PJBL
         // =======================
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl',
             'title' => 'Naskah Akademik dan Paparan Pembelajaran Mendalam',
             'content' => '<p>Dokumen ini berisi naskah akademik dan paparan pembelajaran mendalam menuju pendidikan bermutu untuk semua. Dokumen-dokumen ini wajib dibaca agar peserta PPG mendapatkan pemahaman kerangka kerja pembelajaran mendalam sebagai landasan menyelesaikan jurnal pembelajaran.</p>
-            <a href="https://storage.googleapis.com/microlearning-public-production/document/5f9a7be1-74e6-4c10-a93a-314a6cb507fa-ACC%20Menteri_Nasmik_Pembelajaran%20Mendalam%20(2)_compressed.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar Naskah Akademik dan Paparan Pembelajaran Mendalam</a>',
+            <a href="https://storage.googleapis.com/microlearning-public-production/document/5f9a7be1-74e6-4c10-a93a-314a6cb507fa-ACC%20Menteri_Nasmik_Pembelajaran%20Mendalam%20(2)_compressed.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar Naskah Akademik dan Paparan Pembelajaran Mendalam</a>
+            <p><a href="https://storage.googleapis.com/microlearning-public-production/document/f0931beb-ffa3-495d-939a-89abad76b75a-Paparan%20Pembelajaran%20Mendalam%20V2%20(1)%20(1).pdf" target="_blank" class="text-blue-600 underline">📄 Paparan Pembelajaran Mendalam</p></a>',
             'order' => 2,
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-2',
             'title' => 'Pembelajaran Pengantar Pendidikan Anak Berkebutuhan Khusus',
             'content' => '<p>Dokumen ini adalah materi esensial bagi peserta PPG Guru Tertentu memahami pendidikan untuk anak berkebutuhan khusus. Materi esensial ini memuat 2 topik yang berisi tentang keberagaman peserta didik dan pendidikan inklusif. Dengan membaca materi ini, peserta PPG mampu memahami keragaman peserta dan memberikan akomodasi layak sesuai kebutuhan peserta didik. Selain itu, peserta PPG juga mampu memahami ruang lingkup pendidikan inklusif dan implementasinya di sekolah.</p>
@@ -62,7 +63,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-3',
             'title' => 'Bagaimana Pembelajaran Model PjBL di SMK Anda?',
             'content' => '<p>Bagian ini berisi penjelasan singkat tentang informasi awal untuk memulai pembelajaran berupa pengamatan video inspirasi.</p>
@@ -71,7 +72,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-4',
             'title' => 'Video 1.1 Model PjBL di SMK Anda',
             'content' => '<p>Pada bagian ini guru diberikan gambaran awal tentang PjBL dengan menonton video tentang Pembelajaran berbasis Proyek (PjBL). Guru mengamati bagaimana pembelajaran PjBL diterapkan di kelas. Berikut tautan ke video tersebut.</p>
@@ -80,7 +81,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-5',
             'title' => 'Bagaimana Pembelajaran Model PjBL Diterapkan di SMK?',
             'content' => '<p>Pada bagian ini merupakan paparan materi tentang pembelajaran dan asesmen pada model PjBL terdiri dari:</p>
@@ -95,7 +96,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-6',
             'title' => 'Video 1.2 Konsep PjBL',
             'content' => '<p>Video konsep PjBL untuk menguatkan pemahaman Ibu/Bapak guru tentang model pembelajaran PjBL. Ibu/Bapak guru mengamati dan mencatat informasi apa diperoleh dari menonton video. Berikut tautan ke video tersebut.</p>
@@ -104,7 +105,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-7',
             'title' => 'Bagaimana Pembelajaran Model PjBL yang efektif?',
             'content' => '<p>Bapak/Ibu Guru diminta mencari partner diskusi (dengan teman sejawat/kepala sekolah/pengawas/praktisi) untuk menelaah video tentang perencanaan dan pengelolaan pembelajaran model PjBL.</p>
@@ -113,7 +114,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-8',
             'title' => 'Video 1.3 Telaah PjBL',
             'content' => '<p>Pada bagian ini, Ibu/Bapak guru diminta untuk menelaah penerapan pembelajaran model PjBL yang efektif. Ibu/Bapak guru dapat melibatkan rekan sejawat, kepala sekolah, pengawas sekolah, atau praktisi pendidikan. Ibu/Bapak guru memilih salah satu dari kegiatan berikut:</p>
@@ -126,7 +127,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-9',
             'title' => 'Serba Serbi Penerapan Pembelajaran Model PjBL',
             'content' => '<p>Ibu/Bapak Guru diminta memaparkan hasil telaah video tentang PjBL di atas dengan memilih salah satu cara di bawah:</p>
@@ -142,7 +143,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-10',
             'title' => 'Kelebihan dan Kekurangan Pelaksanaan Pembelajaran Model PjBL di SMK',
             'content' => '<p>Setelah Bapak/Ibu Guru melakukan telaah model pembelajaran PjBL, Bapak/Ibu Guru menuliskan adakah hal-hal yang masih perlu diketahui lebih lanjut? Atau hal lain yang belum pahami? Bapak/Ibu Guru menuliskan jawaban pada kolom yang tersedia.</p>
@@ -156,7 +157,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-11',
             'title' => 'Bagaimana Keterkaitan Antar Mapel dalam Pembelajaran Model PjBL?',
             'content' => '<p>Pada bagian Koneksi Antarmateri ini, diharapkan Bapak/Ibu Guru membuat hubungan antarmateri yang sedang dipelajari dengan materi lain, mata kuliah lain, atau dengan pengalaman belajar atau mengajar secara komprehensif. Bapak/Ibu Guru juga bisa membuat hubungan antara Pembelajaran Model PjBL dengan model dan konteks pembelajaran lain di SMK seperti Tefa, Kelas Industri, Kelas Kewirausahaan.</p>
@@ -165,7 +166,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
             'slug' => 'model-pjbl-12',
             'title' => 'Aksi Nyata: Pengalaman Melaksanakan Pembelajaran Model PjBL di SMK',
             'content' => '<p>Bapak/Ibu Guru doiminta membuat rencana pengembangan pembelajaran model PjBL di sekolah, memulai dengan mengikuti pertanyaan pemantik berikut ini.</p>
@@ -179,22 +180,17 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 1 Pembelajaran dan Asesmen Model PjBL',
-            'slug' => 'model-pjbl-13',
-            'title' => 'Latihan Pemahaman',
-            'content' => '<p>Pada bagian ini, Ibu/Bapak guru diminta untuk menelaah penerapan pembelajaran model PjBL yang efektif. Ibu/Bapak guru dapat melibatkan rekan sejawat, kepala sekolah, pengawas sekolah, atau praktisi pendidikan. Ibu/Bapak guru memilih salah satu dari kegiatan berikut:</p>
-            <ol>
-                <li>(1) Menonton video pada tautan yang diberikan, Ibu/Bapak guru melakukan telaah bersama dengan partner Anda tentang model pembelajaran PjBL.</li>
-                <li>(2) Menelaah rancangan pembelajaran model PjBL yang pernah Anda kembangkan.</li>
-            </ol>
-            <p><a href="https://youtu.be/o-qa4WPyflU" target="_blank" class="text-blue-600 underline">🎥 Link Video </a></p>',
+            'section' => 'BAB II: Pembelajaran dan Asesmen Model PjBL',
+            'slug' => 'lab-challenge-bab2',
+            'title' => 'Lab Challenge BAB II',
+            'content' => '<p><a href="https://forms.gle/3Rm6ziWYAuGWiZwz6" target="_blank" class="text-blue-600 underline">Link Lab Challenge BAB II</a></p>',
             'order' => 14,
         ]);
 
         // BAB 2:Pembelajaran dan asesment Kelas Industri
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-1',
             'title' => 'Video 2.1 Kelas Industri',
             'content' => '<p>Bapak/Ibu Guru mengawali pembelajaran topik 2 dengan menonton video mengenai contoh Kelas Industri berikut.</p><a href="https://youtu.be/u4l97xFi_GY" target="_blank" class="text-blue-600 underline">🎥 Link Video Kelas Industri</a>',
@@ -202,7 +198,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-2',
             'title' => 'Adakah Kelas industri di Sekolah Anda?',
             'content' => '<p>Setelah mengamati video inspiratif tentang konteks pembelajaran Kelas Industri tersebut, Bapak/Ibu Guru menuliskan apa yang tersirat dalam pikiran tentang pembelajaran Kelas Industri.</p><a href="https://storage.googleapis.com/microlearning-public-production/document/57371878-2c61-400c-837e-dd8805406df2-08%20PPA_SMK_TOPIK2a_Adakah%20Kelas%20Industri%20di%20Sekolah%20Anda.docx.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar mengenai Adakah Kelas Industri di Sekolah Anda</a>',
@@ -210,7 +206,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-3',
             'title' => 'Gambaran Kelas Industri di SMK',
             'content' => '<p>Bapak/Ibu Guru membaca materi tentang Pembelajaran dan Asesmen pada Kelas Industri, yang berisi:</p>
@@ -225,7 +221,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-4',
             'title' => 'Video 2.2 Kelas Industri SMKN 1 Bawang',
             'content' => '<p>Bapak/Ibu Guru diminta mencermati video tentang pembelajaran di Kelas Industri SMKN 1 Bawang, mencatat bagaimana penerapan kegiatan dan asesmen di kelas industri diterapkan serta peran guru dalam pembelajaran.</p><a href="https://youtu.be/xwSEq9ykv6w" target="_blank" class="text-blue-600 underline">🎥 Link Video Kelas Industri SMKN 1 Bawang</a>',
@@ -233,7 +229,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-5',
             'title' => 'Video 2.3 Seleksi Peserta Didik Kelas Industri',
             'content' => '<p>Bapak/Ibu guru menonton video berikut ini memberikan gambaran tentang penyiapan kelas industri, yaitu seleksi calon peserta didik. Simak dan pelajari bagaimana seleksi tersebut dilakukan.</p><a href="https://youtu.be/jAq-hIifAus" target="_blank" class="text-blue-600 underline">🎥 Link Video Seleksi Peserta Didik Kelas Industri</a>',
@@ -241,7 +237,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-6',
             'title' => 'Video 2.4 Kelas Industri Perhotelan',
             'content' => '<p>Bapak/Ibu Guru membahas materi tentang pelaksanaan pembelajaran dan asesmen Kelas Industri, melalui video pada tautan berikut ini Bapak/Ibu Guru menyimak bagaimana penerapan kelas industri di SMK.</p><a href="https://youtu.be/ZlmGVvgJGiY" target="_blank" class="text-blue-600 underline">🎥 Link Video Kelas Industri Perhotelan</a>',
@@ -249,7 +245,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-7',
             'title' => 'Mengapa Harus Kelas Industri?',
             'content' => '
@@ -264,7 +260,7 @@ class CourseSeeder extends Seeder
 
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-8',
             'title' => 'Serba Serbi Kelas Industri',
             'content' => '<p>Pada bagian ini ibu dan bapak guru membagikan hasil kolaborasi dengan rekan sejawat atau kepala sekolah atau pengawas atau praktisi pendidikan yang telah dilakukan. Ada beberapa pilihan kegiatan yang dapat dipilih untuk berbagi hasil kolaborasi dengan memilih salah satu dari alternatif di bawah ini:</p>
@@ -279,7 +275,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-9',
             'title' => 'Peluang Penerapan Kelas Industri di SMK',
             'content' => '<p>Setelah Bapak/Ibu Guru mempelajari materi penerapan kelas industri di SMK, Bapak/Ibu Guru menuliskan dalam tabel yang berisi tentang:</p>
@@ -292,7 +288,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-10',
             'title' => 'Pembelajaran Model PjBL dan Kelas Industri?',
             'content' => '<p>Bapak/Ibu Guru SMK yang hebat, pada bagian ini buatlah peta konsep, infografis atau bentuk visualisasi lainnya yang dapat menggambarkan hubungan antara pembelajaran model PjBL dan kelas industri. Fokuskan visualisasi Anda pada konsep-konsep utama.</p><a href="https://storage.googleapis.com/microlearning-public-production/document/2889aacd-07a1-464c-98b9-b999bc8f6e8c-13%20PPA_SMK_TOPIK2f_Pembelajaran%20Model%20PjBl%20dan%20Kelas%20Industri.docx.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar Pembelajaran Model PjBL dan Kelas Industri</a>',
@@ -300,7 +296,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-11',
             'title' => 'Aksi Nyata: Ayo, Buka Kelas Industri di SMK Anda!',
             'content' => '<p>Bapak/Ibu Guru diminta untuk melakukan refleksi terkait materi pembelajaran Kelas Industri di SMK berupa rencana aksi.</p><a href="https://storage.googleapis.com/microlearning-public-production/document/6c4a7e4f-a15b-4371-a0b1-c3b65d3cc226-14%20PPA_SMK_TOPIK2g_Ayo,%20Buka%20Kelas%20Industri%20di%20SMK%20Anda.docx.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar Buka Kelas Industri di smk</a>',
@@ -308,17 +304,17 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 2 Pembelajaran dan Asesmen Kelas Industri',
+            'section' => 'BAB III: Pembelajaran dan Asesmen Kelas Industri',
             'slug' => 'kelas-industri-12',
-            'title' => 'Latihan Pemahaman!',
-            'content' => '<p>Bapak/Ibu Guru diminta untuk melakukan refleksi terkait materi pembelajaran Kelas Industri di SMK berupa rencana aksi.</p><a href="https://storage.googleapis.com/microlearning-public-production/document/6c4a7e4f-a15b-4371-a0b1-c3b65d3cc226-14%20PPA_SMK_TOPIK2g_Ayo,%20Buka%20Kelas%20Industri%20di%20SMK%20Anda.docx.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar Buka Kelas Industri di smk</a>',
+            'title' => 'Lab Challenge BAB III',
+            'content' => '<p><a href="https://forms.gle/SjHyHvFeLoRTXsoa6" target="_blank" class="text-blue-600 underline">Link Lab Challenge BAB III</a></p>',
             'order' => 26,
         ]);
 
         // BAB 3 Pembelajaran dan asesmen kelas kewirausahaan
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-1',
             'title' => 'Gambaran Kelas Kewirausahaan di SMK',
             'content' => '<p>Bapak/Ibu Guru diberikan gambaran awal tentang topik yang ketiga yaitu Pembelajaran dan Asesmen Kelas Kewirausahaan. Bapak/Ibu Guru dijelaskan tujuan pembelajaran yang diharapkan, yaitu diharapkan mampu:</p>
@@ -331,7 +327,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-2',
             'title' => 'Video 3.1 Pembelajaran Kelas Kewirausahaan (Sekolah Pencetak Wirausaha)',
             'content' => '<p>Untuk mendapatkan gambaran awal materi pada topik ini, Bapak/Ibu Guru diharapkan menyimak video tentang kegiatan pembelajaran dan asesmen di kelas kewirausahaan ini, lalu mengisi pertanyaan reflektif pada teks sebelumnya.</p>
@@ -340,7 +336,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-3',
             'title' => 'Bagaimana Mewujudkan Kelas Kewirausahaan di SMK?',
             'content' => '<p>Bapak/Ibu Guru membahas materi topik 3 yang berisi tentang:</p>
@@ -355,7 +351,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-4',
             'title' => 'Video 3.2 Kelas Kewirausahaan',
             'content' => '<p>Untuk mengawali pembahasan pada topik ini, Bapak/Ibu Guru mencermati video tentang kelas kewirausahaan pada tautan berikut dan mencatat informasi penting bagaimana guru melaksanakan kegiatan pembelajaran dan asesmen di kelas kewirausahaan. Instruksi pengerjaan selengkapnya dapat merujuk kepada teks sebelumnya.</p>
@@ -364,7 +360,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-5',
             'title' => 'Kelas Kewirausahaan sebagai Peluang Wirausaha Peserta Didik Sambil Belajar',
             'content' => 'Pada bagian ini, Bapak/Ibu Guru diminta untuk menelaah penerapan pembelajaran Kelas Kewirausahaan. Anda dapat melibatkan rekan sejawat, kepala sekolah, pengawas sekolah atau praktisi pendidikan. Pilihlah salah satu dari kegiatan berikut ini.</p>
@@ -377,7 +373,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-6',
             'title' => 'Bagaimana Kelas Kewirausahaan Dibangun?',
             'content' => '<p>Pada tahap ini, Anda diminta untuk memaparkan hasil telaah yang dilakukan.
@@ -394,7 +390,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-7',
             'title' => 'Siapkah Sekolah Anda Menyelenggarakan Kelas Kewirausahaan?',
             'content' => '<p>Untuk memperdalam pemahaman Bapak/Ibu Guru tentang prinsip-prinsip pembelajaran dan asesmen yang diterapkan dalam merencanakan, melaksanakan, dan asesmen kelas kewirausahaan, Bapak/Ibu Guru membuat pertanyaan-pertanyaan mengenai hal-hal yang masih belum dipahami, kemudian didiskusikan dengan rekan, dosen atau instruktur tamu. Bapak/Ibu Guru menulis pertanyaan-pertanyaan tersebut pada kolom yang disediakan</p>
@@ -403,7 +399,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-8',
             'title' => 'Bagaimana Kolaborasi Antar Mata Pelajaran dalam Kelas Kewirausahaan?',
             'content' => '<p>Bapak/Ibu Guru membuat koneksi antar materi tentang prinsip-prinsip pembelajaran dan asesmen yang diterapkan dalam merencanakan, melaksanakan, dan asesmen Kelas Kewirausahaan. Bapak/Ibu Guru dapat mengaitkan beberapa mata pelajaran yang mendukung perencanaan dan pelaksanaan projek/produk kewirausahaan. Koneksi antar materi ini bisa berupa poster, infografis, atau mind map!</p>
@@ -412,7 +408,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-9',
             'title' => 'Aksi Nyata: Membangun Jiwa Entrepreneur Semasa Belajar di SMK',
             'content' => '<p>Bapak/Ibu Guru diminta untuk melakukan refleksi terkait materi pembelajaran Kelas Kewirausahaan di SMK berdasarkan pertanyaan: "Bentuk pembelajaran Kelas Kewirausahaan seperti apa yang menurut Bapak/Ibu Guru memiliki peluang untuk dikembangkan di sekolah yang dituangkan dalam rencana aksi nyata pengembangan prinsip pembelajaran dan asesmen Kelas Kewirausahaan?"</p>
@@ -421,22 +417,17 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 3 Pembelajaran dan Asesmen Kelas Kewirausahaan',
+            'section' => 'BAB IV: Pembelajaran dan Asesmen Kelas Kewirausahaan',
             'slug' => 'Kelas-Kewirausahaan-10',
-            'title' => 'Latihan Pemahaman',
-            'content' => '<p>Bapak/Ibu Guru diberikan gambaran awal tentang topik yang ketiga yaitu Pembelajaran dan Asesmen Kelas Kewirausahaan. Bapak/Ibu Guru dijelaskan tujuan pembelajaran yang diharapkan, yaitu diharapkan mampu:</p>
-            <ol>
-                <li>(1) Menjelaskan prinsip pembelajaran dan asesmen Kelas Kewirausahaan.</li>
-                <li>(2) Menerapkan pembelajaran dan asesmen Kelas Kewirausahaan.</li>
-            </ol>
-            <a href="https://storage.googleapis.com/microlearning-public-production/document/151ff198-33e1-46f8-8878-c72a182cd943-15%20PPA_SMK_TOPIK3a_Gambaran%20Kelas%20Kewirausahaan%20di%20SMK.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar Gambaran Kelas Kewirausahaan di SMK</a>',
+            'title' => 'Lab Challenge BAB IV',
+            'content' => '<p><a href="https://forms.gle/q4UaSdXskDMEjUkL6" target="_blank" class="text-blue-600 underline">Link Lab Challenge BAB IV</a></p>',
             'order' => 36,
         ]);
 
         // Bab 4 Pembelajaran dan Asesmen Kelas Tefa
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-1',
             'title' => 'Apa yang Anda Ketahui tentang Kelas Teaching Factory?',
             'content' => '<p>Pada bagian ini, Bapak/Ibu Guru diberikan gambaran awal tentang materi topik 4 Pembelajaran dan Asesmen Kelas Tefa, serta tujuan setelah mempelajari topik ini, yaitu:</p>
@@ -449,7 +440,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-2',
             'title' => 'Video 4.1 Teaching Factory',
             'content' => '<p>Bapak/Ibu guru dipersilakan menyimak video tentang pembelajaran pada konteks Teaching Factory berikut dan mencatat informasi yang terkait dengan pembelajaran dan asesmen pada Teaching Factory!</p>
@@ -458,7 +449,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-3',
             'title' => 'Bagaimana Desain Kelas Tefa di SMK?',
             'content' => '<p>Pada topik 4 akan membahas tentang Pembelajaran dan Asesmen Kelas Tefa, yang terdiri dari materi:</p>
@@ -473,7 +464,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-4',
             'title' => 'Video 4.2 Konsep Teaching Factory',
             'content' => '<p>Sebelum mempelajari lebih jauh tentang teaching factory, Bapak/Ibu Guru mencermati video tentang teaching factory berikut.</p>
@@ -482,7 +473,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-5',
             'title' => 'Video 4.3 Pemilihan Produk Tefa',
             'content' => '<p>Bapak/Ibu Guru mencermati secara seksama video yang memberikan penjelasan dalam pemilihan produk pada pembelajaran TeFa pada video berikut.</p>
@@ -491,7 +482,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-6',
             'title' => 'Video 4.4 Penyusunan Job Sheet',
             'content' => '<p>Bapak/Ibu guru mencermati secara saksama video yang memberikan penjelasan dalam penyusunan job sheet.</p>
@@ -500,7 +491,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-7',
             'title' => 'Video 4.5 Penjadwalan Blok pada Tefa',
             'content' => '<p>Bapak/Ibu guru mencermati video yang memberikan penjelasan mengenai penjadwalan pada kelas TeFA berikut.</p>
@@ -509,7 +500,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-8',
             'title' => 'Mungkinkan Industri/Pabrik di Sekolah Terwujud?',
             'content' => '<p>Pada ruang kolaborasi topik keempat, Bapak/Ibu Guru diminta untuk mencari rekan sejawat (teman sejawat/kepala sekolah/pengawas/praktisi) untuk menjadi rekan diskusi yang mendiskusikan perencanaan dan pengelolaan pada kelas TeFa.</p>
@@ -518,7 +509,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-9',
             'title' => 'Video 4.6. Telaah Teaching Factory',
             'content' => '<p>Bapak/Ibu Guru diminta untuk menemukan perencanaan, pembelajaran dan asesmen dilakukan guru berdasarkan pengamatan video berikut ini.</p>
@@ -527,7 +518,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-10',
             'title' => 'Tefa, Bagaimana Merancangnya?',
             'content' => '<p>Pada tahap ini, Bapak/Ibu Guru diminta untuk memaparkan hasil telaah yang dilakukan. Ada beberapa pilihan kegiatan yang dapat dilakukan untuk memaparkan hasil telaah tersebut, yaitu:</p>
@@ -542,7 +533,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-11',
             'title' => 'Teaching Factory, Apa Kesulitannya?',
             'content' => '<p>Untuk memperdalam pemahaman tentang prinsip-prinsip pembelajaran dan asesmen yang diterapkan dalam merencanakan, melaksanakan, dan asesmen kelas teaching factory, Bapak/Ibu Guru ditugaskan untuk membuat pertanyaan-pertanyaan mengenai hal-hal yang masih belum dipahami, kemudian didiskusikan dengan rekan, dosen atau instruktur tamu.</p>
@@ -551,7 +542,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-12',
             'title' => 'Bagaimana Integrasi Mapel Pendukung pada Kelas Tefa?',
             'content' => '<p>Bapak/Ibu Guru membuat koneksi antar materi tentang prinsip-prinsip pembelajaran dan asesmen yang diterapkan dalam merencanakan, melaksanakan, dan asesmen kelas teaching factory. Bapak/Ibu Guru dapat mengaitkan materi pada topik yang lain ataupun mata pelajaran tertentu yang mendukung perencanaan dan pelaksanaan projek/produk teaching factory. Koneksi antar materi ini bisa berupa poster, infografis, atau mind map.</p>
@@ -560,7 +551,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-13',
             'title' => 'Apa yang Anda Ketahui tentang Kelas Teaching Factory?',
             'content' => '<p>Pada bagian ini, Bapak/Ibu Guru diberikan gambaran awal tentang materi topik 4 Pembelajaran dan Asesmen Kelas Tefa, serta tujuan setelah mempelajari topik ini, yaitu:</p>
@@ -573,7 +564,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-14',
             'title' => 'Aksi Nyata: Tefa, SMK Pasti Bisa',
             'content' => '<p>Bapak/Ibu Guru diminta untuk melakukan refleksi terkait materi pembelajaran Kelas Tefa di SMK.
@@ -584,22 +575,17 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 4 Pembelajaran dan Asesmen Kelas Tefa',
+            'section' => 'BAB V: Pembelajaran dan Asesmen Kelas Tefa',
             'slug' => 'Kelas-Tefa-15',
-            'title' => 'Latihan Pemahaman',
-            'content' => '<p>Pada bagian ini, Bapak/Ibu Guru diberikan gambaran awal tentang materi topik 4 Pembelajaran dan Asesmen Kelas Tefa, serta tujuan setelah mempelajari topik ini, yaitu:</p>
-            <ol>
-                <li>(1) Menjelaskan prinsip pembelajaran dan asesmen Kelas Teaching Factory (Tefa).</li>
-                <li>(2) Menerapkan pembelajaran dan asesmen Kelas Tefa.</li>
-            </ol>
-            <a href="https://storage.googleapis.com/microlearning-public-production/document/8f93ceba-3b99-426a-8556-78a1d6d4f5cc-22%20PPA_SMK_TOPIK4a_Apa%20yang%20Anda%20ketahui%20tentang%20%20Kelas%20Teaching%20Factory.docx.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar tentang Kelas Teaching Factory</a>',
+            'title' => 'Lab Challenge BAB V',
+            'content' => '<p><a href="https://forms.gle/DHZomvGEEKFxBwccA" target="_blank" class="text-blue-600 underline">Link Lab Challenge BAB V</a></p>',
             'order' => 51,
         ]);
 
         // BAB 5 Pembelajaran dan Asessmen Mata Pelajaran PKL.
 
         course::create([
-            'section' => 'BAB: 5 Pembelajaran dan Asesmen Mata Pelajaran PKL',
+            'section' => 'BAB VI: Pembelajaran dan Asesmen Mata Pelajaran PKL',
             'slug' => 'PKL-1',
             'title' => 'Bagaimana PKL Dilaksanakan di Sekolah Anda?',
             'content' => '<p>Bapak/Ibu Guru dijelaskan tentang tujuan setelah mempelajari topik ini, yaitu Bapak/Ibu Guru mampu:</p>
@@ -617,7 +603,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 5 Pembelajaran dan Asesmen Mata Pelajaran PKL',
+            'section' => 'BAB VI: Pembelajaran dan Asesmen Mata Pelajaran PKL',
             'slug' => 'PKL-2',
             'title' => 'Sekarang Wajib Tahu PKL adalah Mata Pelajaran di SMK!',
             'content' => '<p>Pada bagian ini dibahas materi tentang:</p>
@@ -632,7 +618,7 @@ class CourseSeeder extends Seeder
         ]);
 
         Course::create([
-            'section' => 'BAB: 5 Pembelajaran dan Asesmen Mata Pelajaran PKL',
+            'section' => 'BAB VI: Pembelajaran dan Asesmen Mata Pelajaran PKL',
             'slug' => 'PKL-3',
             'title' => 'Bagaimana Sebaiknya Implementasi Mapel PKL di Dunia Kerja?',
             'content' => '
@@ -669,7 +655,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 5 Pembelajaran dan Asesmen Mata Pelajaran PKL',
+            'section' => 'BAB VI: Pembelajaran dan Asesmen Mata Pelajaran PKL',
             'slug' => 'PKL-4',
             'title' => 'Diskusi PKL, Bagaimana Bentuknya?',
             'content' => '<pPada tahap ini, Bapak/Ibu Guru diminta untuk memaparkan hasil kerja berupa TP dan ATP yang disusun berdasarkan Capaian Pembelajaran pada Elemen 1 dari CP mapel PKL.</p>
@@ -685,7 +671,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 5 Pembelajaran dan Asesmen Mata Pelajaran PKL',
+            'section' => 'BAB VI: Pembelajaran dan Asesmen Mata Pelajaran PKL',
             'slug' => 'PKL-5',
             'title' => 'Sulitkah Melaksanakan Mapel PKL di Dunia Kerja?',
             'content' => '<p>Untuk memperdalam pemahaman Bapak/Ibu guru tentang prinsip-prinsip pembelajaran dan asesmen pada Mapel PKL, ditugaskan untuk membuat pertanyaan-pertanyaan mengenai hal-hal yang masih belum dipahami, kemudian didiskusikan dengan rekan, dosen atau instruktur tamu.</p>
@@ -694,7 +680,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 5 Pembelajaran dan Asesmen Mata Pelajaran PKL',
+            'section' => 'BAB VI: Pembelajaran dan Asesmen Mata Pelajaran PKL',
             'slug' => 'PKL-6',
             'title' => 'Bagaimana Relasi Kelompok Mata Pelajaran terhadap Pencapaian Kompetensi Mapel PKL di Dunia Kerja?',
             'content' => '<p>Pada bagian ini Bapak/Ibu Guru ditugaskan untuk membuat koneksi antar materi tentang pembelajaran dan asesmen pada Mapel PKL. Bapak/Ibu Guru dapat mengaitkan materi pada topik yang lain ataupun mata pelajaran tertentu yang mendukung perencanaan dan pelaksanaan PKL sebagai Mapel. Koneksi antar materi ini bisa berupa poster, infografis, atau mind map.</p>
@@ -703,7 +689,7 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 5 Pembelajaran dan Asesmen Mata Pelajaran PKL',
+            'section' => 'BAB VI: Pembelajaran dan Asesmen Mata Pelajaran PKL',
             'slug' => 'PKL-7',
             'title' => 'Aksi Nyata: Mari, Merancang Mapel PKL Bersama Industri/Dunia Kerja!',
             'content' => '<p>Bapak/Ibu Guru diminta untuk melakukan refleksi terkait materi pembelajaran mata pelajaran PKL di SMK.
@@ -714,11 +700,10 @@ class CourseSeeder extends Seeder
         ]);
 
         course::create([
-            'section' => 'BAB: 5 Pembelajaran dan Asesmen Mata Pelajaran PKL',
+            'section' => 'BAB VI: Pembelajaran dan Asesmen Mata Pelajaran PKL',
             'slug' => 'PKL-8',
-            'title' => 'Latihan Pemahaman?',
-            'content' => '<p>Pada bagian ini Bapak/Ibu Guru ditugaskan untuk membuat koneksi antar materi tentang pembelajaran dan asesmen pada Mapel PKL. Bapak/Ibu Guru dapat mengaitkan materi pada topik yang lain ataupun mata pelajaran tertentu yang mendukung perencanaan dan pelaksanaan PKL sebagai Mapel. Koneksi antar materi ini bisa berupa poster, infografis, atau mind map.</p>
-             <a href="https://storage.googleapis.com/microlearning-public-production/document/2468d010-288f-46cb-b599-80a79c9823e1-34%20PPA_SMK_TOPIK5f_Bagaimana%20%20Relasi%20Kelompok%20Mata%20Pelajaran%20terhadap%20Pencapaian%20Kompetensi%20Mapel%20PKL%20di%20Dunia%20Kerja.docx.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar Bagaimana Relasi Kelompok Mata Pelajaran terhadap Pencapaian Kompetensi Mapel PKL di Dunia Kerja</a>',
+            'title' => 'Lab Challenge BAB VI',
+            'content' => '<p><a href="https://forms.gle/8Gvr1cVgJy2tNDmR6" target="_blank" class="text-blue-600 underline">Link Lab Challenge BAB VI</a></p>',
             'order' => 59,
         ]);
 
