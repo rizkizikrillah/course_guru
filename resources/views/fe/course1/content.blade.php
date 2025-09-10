@@ -2,7 +2,7 @@
     <div class="bg-white rounded-xl shadow-sm border">
         <div class="p-6 border-b">
             <h1 class="text-2xl font-bold">
-                {{ $title ?? 'Introduction' }}
+                {{ $title ?? 'Instruction' }}
             </h1>
         </div>
 

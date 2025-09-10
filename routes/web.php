@@ -6,7 +6,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ModulController;
-use App\Http\Controllers\LabChallengeController;
+use App\Http\Controllers\Course2Controller;
 
 // Root redirect
 Route::get('/', function () {
@@ -35,6 +35,12 @@ Route::middleware('auth')->group(function () {
     // Tambahkan rute modul di dalam middleware auth
     Route::get('/modul', [ModulController::class, 'index'])->name('modul.index');
 
+    Route::get('/course2', [Course2Controller::class, 'index'])->name('course2.index');
+    Route::get('/course2/{slug}', [Course2Controller::class, 'show'])->name('course2.show');
+
+    Route::post('/course2/{id}/quiz/check', [Course2Controller::class, 'checkQuiz'])
+        ->name('course2.quiz.check')
+        ->middleware('auth');
 });
 
 require __DIR__ . '/auth.php';
