@@ -181,7 +181,7 @@ class Course2Seeder extends Seeder
             'order' => 10,
             'section' => 'bab-1',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab I ini, silahkan di klik link yang ada di bawah</p>
-            <a href="https://forms.gle/3Rm6ziWYAuGWiZwz6" target="_blank" class="text-blue-600 underline">📄 Latihan Pemahaman</a>',
+            <a href="https://forms.gle/UJrUPqxN4RNBa6zT6" target="_blank" class="text-blue-600 underline">📄 Latihan Pemahaman</a>',
             'parent_id' => $subbab1->id,
         ]);
 
@@ -345,7 +345,7 @@ class Course2Seeder extends Seeder
             'order' => 20,
             'section' => 'bab-2',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab II ini, silahkan di klik link yang ada di bawah</p>
-            <a href="https://forms.gle/3Rm6ziWYAuGWiZwz6" target="_blank" class="text-blue-600 underline">📄 Latihan Pemahaman BAB II</a>',
+            <a href="https://forms.gle/CYw5YiXyzPLhPRZq5" target="_blank" class="text-blue-600 underline">📄 Latihan Pemahaman BAB II</a>',
             'parent_id' => $subbab2->id,
         ]);
 
@@ -602,7 +602,7 @@ class Course2Seeder extends Seeder
             'order' => 36,
             'section' => 'bab-3',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab III ini, silahkan di klik link yang ada di bawah</p>
-            <a href="https://forms.gle/3Rm6ziWYAuGWiZwz6" target="_blank" class="text-blue-600 underline">📄 Latihan Pemahaman BAB II</a>',
+            <a href="https://forms.gle/u1n1mLjP3Uj3mzix8" target="_blank" class="text-blue-600 underline">📄 Latihan Pemahaman BAB II</a>',
             'parent_id' => $subbab3->id,
         ]);
 
@@ -738,7 +738,7 @@ class Course2Seeder extends Seeder
             'order' => 44,
             'section' => 'bab-4',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab IV ini, silahkan di klik link yang ada di bawah</p>
-            <a href="https://forms.gle/3Rm6ziWYAuGWiZwz6" target="_blank" class="text-blue-600 underline">📄 Latihan Pemahaman BAB IV</a>',
+            <a href="https://forms.gle/v58S5VH2VE1fWpGH8" target="_blank" class="text-blue-600 underline">📄 Latihan Pemahaman BAB IV</a>',
             'parent_id' => $subbab4->id,
         ]);
 
