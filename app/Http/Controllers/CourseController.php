@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
+use App\Models\course;
 use App\Models\CourseProgress;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
