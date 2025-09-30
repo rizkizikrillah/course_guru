@@ -59,12 +59,13 @@
 
                 {{-- Konten utama materi --}}
                 {!! $content ?? '<p>
-                            Setelah Anda membaca materi, menonton video, mengerjakan aktivitas, dan memahami seluruh isi pembelajaran dalam bab ini, silakan lanjutkan dengan Latihan Pemahaman sebagai bentuk penyelesaian dan penguatan kompetensi pada bab ini.</p>
-                            <p>Latihan ini bertujuan untuk:</p>
+                            Selamat datang di buku pembelajaran Artificial Intelligence (AI).
+Buku ini disusun untuk membantu pelajar SMA dan SMK mengenal teknologi AI dengan cara yang sederhana, terarah, dan menyenangkan. Melalui buku ini, kalian akan diajak memahami konsep dasar, mencoba praktik langsung, hingga melihat penerapan AI dalam kehidupan sehari-hari.</p>
+                            <p>Agar proses belajar lebih efektif, perhatikan tiga hal berikut:</p>
                             <ol class="list-decimal ml-5">
-                                <li>Mengukur tingkat pemahaman Anda terhadap konsep yang telah dipelajari.</li>
-                                <li>Melatih penerapan pengetahuan pada konteks nyata di kelas SMK.</li>
-                                <li>Menjadi dasar refleksi dan persiapan menuju bab berikutnya.</li>
+                                <li>Bacalah buku ini sesuai urutan bab, mulai dari dasar hingga penerapan, supaya pemahaman lebih kuat.</li>
+                                <li>Ikuti latihan dan contoh program yang tersedia. Dengan mencoba sendiri, pemahaman akan lebih cepat berkembang.</li>
+                                <li>Jangan takut salah atau menghadapi error. Kesalahan adalah bagian penting dari proses belajar.</li>
                             </ol> 
                             <p class="mt-2">
                             👉 Kerjakan Latihan Pemahaman dengan sungguh-sungguh sebagai penutup bab ini.</p>' !!}
