@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Course2;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -42,5 +43,8 @@ class DatabaseSeeder extends Seeder
         }
 
         $this->call(ModulSeeder::class);
+        $this->call(CourseSeeder::class);
+        $this->call(Course2Seeder::class);
+        $this->call(Course4Seeder::class);
     }
 }

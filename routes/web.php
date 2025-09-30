@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ModulController;
 use App\Http\Controllers\Course2Controller;
+use App\Http\Controllers\Course4Controller;
 
 // Root redirect
 Route::get('/', function () {
@@ -41,6 +42,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/course2/{id}/quiz/check', [Course2Controller::class, 'checkQuiz'])
         ->name('course2.quiz.check')
         ->middleware('auth');
+
+    Route::get('/course4', [Course4Controller::class, 'index'])->name('course4.index');
+
+// Halaman show per materi/bab Course4
+Route::get('/course4/{slug}', [Course4Controller::class, 'show'])->name('course4.show');
+    
 });
 
 require __DIR__ . '/auth.php';

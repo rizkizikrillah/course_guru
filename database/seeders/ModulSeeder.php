@@ -28,6 +28,12 @@ class ModulSeeder extends Seeder
                 'unit' => 3,
                 'icon' => 'https://mil-kv.guru.belajar.id/image/collection/topic/46a6badd-4b70-4322-8468-950879a96218-tut wuri handayani.png',
             ],
+            [
+                'title' => 'Pembelajaran Buku AI untuk Siswa',
+                'description' => 'Modul pembelajaran buku AI untuk Siswa',
+                'unit' => 1,
+                'icon' => 'https://img.icons8.com/fluency/96/artificial-intelligence.png',
+            ],
         ];
 
         foreach ($moduls as $modul) {
