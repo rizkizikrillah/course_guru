@@ -54,7 +54,7 @@ class Course4Controller extends Controller
             ->orderBy('order', 'asc')
             ->first();
 
-        return view('fe.Course4.course', [
+        return view('fe.course4.course', [
             'bab' => $bab,
             'activeSlug' => $slug,
             'activeSection' => $materi->section,
