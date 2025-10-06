@@ -45,6 +45,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ModulSeeder::class);
         $this->call(CourseSeeder::class);
         $this->call(Course2Seeder::class);
+        $this->call(Course3Seeder::class);
         $this->call(Course4Seeder::class);
     }
 }

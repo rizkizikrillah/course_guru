@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ModulController;
 use App\Http\Controllers\Course2Controller;
+use App\Http\Controllers\course3Controller;
 use App\Http\Controllers\Course4Controller;
 
 // Root redirect
@@ -42,6 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/course2/{id}/quiz/check', [Course2Controller::class, 'checkQuiz'])
         ->name('course2.quiz.check')
         ->middleware('auth');
+
+    Route::get('/course3', [Course3Controller::class, 'index'])->name('course3.index');
+    Route::get('/course3/{slug}', [Course3Controller::class, 'show'])->name('course3.show');
 
     Route::get('/course4', [Course4Controller::class, 'index'])->name('course4.index');
 

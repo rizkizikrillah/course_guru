@@ -16,17 +16,21 @@
                 <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
                     <span>📄 {{ $modul->unit }} Unit Pembelajaran</span>
                 </div>
-               @if($modul->title == 'Pembelajaran Sosial Emosional')
-    <a href="{{ url('/course2') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
-@elseif($modul->title == 'Pembelajaran Buku AI untuk Siswa')
-    <a href="{{ url('/course4') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
-@else
-    <a href="{{ route('course.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
-@endif
+
+                @if($modul->title == 'Pembelajaran Sosial Emosional')
+                    <a href="{{ route('course2.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
+                @elseif($modul->title == 'Pembelajaran Buku AI untuk Siswa')
+                    <a href="{{ route('course4.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
+                @elseif($modul->title == 'Filosofi Pendidikan dan Pendidikan Nilai') 
+                    <a href="{{ route('course3.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
+                @else
+                    <a href="{{ route('course.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
+                @endif
 
             </div>
+
             @if($modul->icon)
-            <img src="{{ $modul->icon }}" alt="icon" class="w-16 h-16">
+                <img src="{{ $modul->icon }}" alt="icon" class="w-16 h-16">
             @endif
         </div>
         @endforeach
