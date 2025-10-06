@@ -270,7 +270,7 @@ class course3Seeder extends Seeder
             'order' => 17,
             'section' => 'bab-1',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab I ini, silahkan di klik link yang ada di bawah</p>
-                <a href="https://youtu.be/KmoBrwAfeA4" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeH0rc7ih_x9JhY_Yp2DR5Lf_Fw_2i__v5fbBB7ajpVre92tA/viewform?pli=1" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
             'parent_id' => $subbab7->id,
         ]);
 
@@ -455,7 +455,7 @@ class course3Seeder extends Seeder
             'order' => 28,
             'section' => 'bab-2',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab 2 ini, silahkan di klik link yang ada di bawah</p>
-                <a href="https://youtu.be/KmoBrwAfeA4" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMKcwvM7Nc-ZRwxnd5vRifHs8WgeAOM2IwESsSrC9jCml9JQ/viewform" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
             'parent_id' => $subbab13->id,
         ]);
 
@@ -629,8 +629,8 @@ class course3Seeder extends Seeder
             'slug' => 'latihan-pemahaman-3',
             'order' => 37,
             'section' => 'bab-3',
-            'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab I ini, silahkan di klik link yang ada di bawah</p>
-                <a href="https://storage.googleapis.com/microlearning-public-production/document/2a13e756-d396-42c7-822f-35a0708e57ef-3.7.%201.Mari%20Lakukan%20Aksi%20Nyata.pdf" target="_blank" class="text-blue-600 underline">📄 Link Document</a>',
+            'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab 3 ini, silahkan di klik link yang ada di bawah</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7hhliCLQdOo528U5EfvwHm7yWn0JBSla608flNW1GGQAJTA/viewform" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
             'parent_id' => $subbab20->id,
         ]);
 
