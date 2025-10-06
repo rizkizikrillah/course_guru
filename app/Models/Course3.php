@@ -9,7 +9,7 @@ class course3 extends Model
 {
     use HasFactory;
 
-    protected $table = 'course3s'; // pastikan sesuai nama tabel
+    protected $table = 'courses3'; // pastikan sesuai nama tabel
 
     protected $fillable = [
         'parent_id',

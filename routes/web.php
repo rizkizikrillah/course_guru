@@ -7,7 +7,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ModulController;
 use App\Http\Controllers\Course2Controller;
-use App\Http\Controllers\course3Controller;
+use App\Http\Controllers\Course3Controller;
 use App\Http\Controllers\Course4Controller;
 
 // Root redirect
