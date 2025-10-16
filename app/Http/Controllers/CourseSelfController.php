@@ -20,7 +20,7 @@ class CourseSelfController extends Controller
         // Tidak menggunakan progress, biarkan array kosong
         $completedCourses3 = [];
 
-        return view('fe.CourseSelf.course', [
+        return view('fe.courseself.course', [
             'bab' => $bab,
             'completedCourses3' => $completedCourses3,
             'title' => null,
@@ -65,7 +65,7 @@ class CourseSelfController extends Controller
 
         $completedCourses3 = []; // tetap kosong, tidak menggunakan progress
 
-        return view('fe.CourseSelf.course', [
+        return view('fe.courseself.course', [
             'bab' => $bab,
             'completedCourse3' => $completedCourses3,
             'activeSlug' => $slug,
