@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LMS – Login</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Styles / Scripts -->
+    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
+        <!-- Fallback to CDN for quick dev if Vite build/dev not running -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    @endif
     <style>
         .brand-gradient {
             background: linear-gradient(135deg, #2563eb, #06b6d4);

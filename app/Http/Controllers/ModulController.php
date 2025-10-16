@@ -7,60 +7,46 @@ use App\Models\Modul;
 
 class ModulController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
+        // Ambil semua modul dari database
         $moduls = Modul::all();
-        return view('fe.modul', compact('moduls'));
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+        // Bagi berdasarkan kategori (PPG)
+        $modulsPpg = $moduls->filter(function ($modul) {
+            return in_array($modul->title, [
+                'Pembelajaran Mendalam dan Asesmen (SMK)',
+                'Pembelajaran Sosial Emosional',
+                'Filosofi Pendidikan dan Pendidikan Nilai',
+                'Pembelajaran Buku AI untuk Siswa',
+            ]);
+        });
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        // Modul PKL
+        $modulsPkl = $moduls->filter(function ($modul) {
+            return in_array($modul->title, [
+                'PKL',
+                'Laporan PKL',
+                'Evaluasi PKL',
+            ]);
+        });
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+        // Modul 3: Training of Trainer - Self Development
+        $modulsTot = $moduls->filter(function ($modul) {
+            return in_array($modul->title, [
+                'Landasan Pemahaman',
+                'Kurikulum Self Dev',
+            ]);
+        });
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+        // Modul 4: Additional Trainings
+        $modulsAdditional = $moduls->filter(function ($modul) {
+            return in_array($modul->title, [
+                'Key Performance Indicators',
+            ]);
+        });
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        // Kirim ke view
+        return view('fe.modul', compact('modulsPpg', 'modulsPkl', 'modulsTot', 'modulsAdditional'));
     }
 }

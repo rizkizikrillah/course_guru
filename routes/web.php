@@ -9,6 +9,9 @@ use App\Http\Controllers\ModulController;
 use App\Http\Controllers\Course2Controller;
 use App\Http\Controllers\Course3Controller;
 use App\Http\Controllers\Course4Controller;
+use App\Http\Controllers\CourseSelfController;
+use App\Http\Controllers\CourseKurselfController;
+use App\Http\Controllers\CourseTrainingController;
 
 // Root redirect
 Route::get('/', function () {
@@ -48,6 +51,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/course3/{slug}', [Course3Controller::class, 'show'])->name('course3.show');
 
     Route::get('/course4', [Course4Controller::class, 'index'])->name('course4.index');
+
+    Route::get('/courseself', [CourseSelfController::class, 'index'])->name('courseself.index');
+    Route::get('/courseself/{slug}', [CourseSelfController::class, 'show'])->name('courseself.show');
+
+    Route::get('/coursekurself', [CourseKurselfController::class, 'index'])->name('coursekurself.index');
+    Route::get('/coursekurself/{slug}', [CourseKurselfController::class, 'show'])->name('coursekurself.show');
+
+    Route::get('/coursetraining', [CourseTrainingController::class, 'index'])->name('coursetraining.index');
+    Route::get('/coursetraining/{slug}', [CourseTrainingController::class, 'show'])->name('coursetraining.show');
+
 
 // Halaman show per materi/bab Course4
 Route::get('/course4/{slug}', [Course4Controller::class, 'show'])->name('course4.show');
