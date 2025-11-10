@@ -39,21 +39,9 @@ class ModulSeeder extends Seeder
             // ====== PKL ======
             [
                 'title' => 'PKL',
-                'description' => 'Modul PKL',
-                'unit' => 1,
+                'description' => 'Isi dari Modul ini adalah sebuah dokumentasi beberapa file terkait pembekalan PKL di SMK TI BAZMA',
+                'unit' => 3,
                 'icon' => 'https://img.icons8.com/fluency/96/artificial-intelligence.png',
-            ],
-            [
-                'title' => 'Laporan PKL',
-                'description' => 'Panduan penyusunan laporan kegiatan PKL.',
-                'unit' => 2,
-                'icon' => 'https://img.icons8.com/fluency/96/report-card.png',
-            ],
-            [
-                'title' => 'Evaluasi PKL',
-                'description' => 'Modul untuk evaluasi hasil praktik kerja lapangan siswa.',
-                'unit' => 1,
-                'icon' => 'https://img.icons8.com/fluency/96/approval.png',
             ],
 
             // ====== Training of Trainer - Self Development ======
@@ -75,6 +63,15 @@ class ModulSeeder extends Seeder
                 'title' => 'Key Performance Indicators',
                 'description' => 'Materi ini bertujuan untuk membekali tenaga pendidik dan kependidikan dengan pemahaman tentang konsep, urgensi, dan penerapan Key Performance Indicators (KPI). Peserta diharapkan mampu memaknai KPI sebagai alat ukur kinerja yang strategis, serta menyusun indikator yang relevan, terukur, dan selaras dengan visi misi dan nilai yang dipegang SMK TI BAZMA.',
                 'unit' => 1,
+                'icon' => 'https://img.icons8.com/fluency/96/computer.png',
+            ],
+
+            [
+                'title' => 'Gemini Academy',
+                'description' => 'Melalui pelatihan ini, guru akan mampu menguasai teknologi AI, khususnya Gemini, dan mengaplikasikannya dalam pembelajaran
+                Guru akan belajar strategi pembelajaran berbasis TIK yang adaptif, sehingga dapat meningkatkan keterlibatan dan prestasi siswa
+                Secara keseluruhan, pelatihan ini bertujuan untuk meningkatkan kompetensi guru dalam memanfaatkan teknologi untuk menciptakan pembelajaran yang lebih inovatif dan efektif',
+                'unit' => 3,
                 'icon' => 'https://img.icons8.com/fluency/96/computer.png',
             ],
         ];

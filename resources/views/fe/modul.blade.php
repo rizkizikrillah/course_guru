@@ -52,11 +52,7 @@
                     <span>📄 {{ $modul->unit }} Unit Pembelajaran</span>
                 </div>
                 @if($modul->title == 'PKL')
-                    <a href="{{ route('course2.index') }}" class="inline-block px-4 py-2 bg-green-300 hover:bg-green-600 text-white text-sm rounded">Masuk</a>
-                @elseif($modul->title == 'Laporan PKL')
-                    <a href="{{ route('course4.index') }}" class="inline-block px-4 py-2 bg-green-300 hover:bg-green-600 text-white text-sm rounded">Masuk</a>
-                @else($modul->title == 'Evaluasi PKL') 
-                    <a href="{{ route('course3.index') }}" class="inline-block px-4 py-2 bg-green-300 hover:bg-green-600 text-white text-sm rounded">Masuk</a>
+                    <a href="{{ route('coursepkl.index') }}" class="inline-block px-4 py-2 bg-green-300 hover:bg-green-600 text-white text-sm rounded">Masuk</a>
                 @endif
             </div>
 
@@ -113,6 +109,8 @@
                 </div>
                 @if($modul->title == 'Key Performance Indicators')
                     <a href="{{ route('coursetraining.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
+                @elseif($modul->title == 'Gemini Academy')
+                    <a href="{{ route('coursegemini.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
                 @endif
             </div>
 

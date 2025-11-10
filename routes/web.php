@@ -12,6 +12,8 @@ use App\Http\Controllers\Course4Controller;
 use App\Http\Controllers\CourseSelfController;
 use App\Http\Controllers\CourseKurselfController;
 use App\Http\Controllers\CourseTrainingController;
+use App\Http\Controllers\CoursePklController;
+use App\Http\Controllers\CourseGeminiController;
 
 // Root redirect
 Route::get('/', function () {
@@ -60,6 +62,12 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/coursetraining', [CourseTrainingController::class, 'index'])->name('coursetraining.index');
     Route::get('/coursetraining/{slug}', [CourseTrainingController::class, 'show'])->name('coursetraining.show');
+
+    Route::get('/coursepkl', [CoursePklController::class, 'index'])->name('coursepkl.index');
+    Route::get('/coursepkl/{slug}', [CoursePklController::class, 'show'])->name('coursepkl.show');
+
+    Route::get('/coursegemini', [CourseGeminiController::class, 'index'])->name('coursegemini.index');
+    Route::get('/coursegemini/{slug}', [CourseGeminiController::class, 'show'])->name('coursegemini.show');
 
 
 // Halaman show per materi/bab Course4

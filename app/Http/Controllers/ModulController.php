@@ -26,8 +26,6 @@ class ModulController extends Controller
         $modulsPkl = $moduls->filter(function ($modul) {
             return in_array($modul->title, [
                 'PKL',
-                'Laporan PKL',
-                'Evaluasi PKL',
             ]);
         });
 
@@ -43,6 +41,7 @@ class ModulController extends Controller
         $modulsAdditional = $moduls->filter(function ($modul) {
             return in_array($modul->title, [
                 'Key Performance Indicators',
+                'Gemini Academy',
             ]);
         });
 
