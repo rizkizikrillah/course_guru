@@ -41,7 +41,7 @@ class ModulSeeder extends Seeder
                 'title' => 'PKL',
                 'description' => 'Isi dari Modul ini adalah sebuah dokumentasi beberapa file terkait pembekalan PKL di SMK TI BAZMA',
                 'unit' => 3,
-                'icon' => 'https://img.icons8.com/fluency/96/artificial-intelligence.png',
+                'icon' => 'https://img.icons8.com/fluency/96/internship.png',
             ],
 
             // ====== Training of Trainer - Self Development ======
@@ -49,13 +49,13 @@ class ModulSeeder extends Seeder
                 'title' => 'Landasan Pemahaman',
                 'description' => 'Memahami konsep dasar pengembangan diri melalui refleksi, kesadaran diri, dan perencanaan pengembangan potensi secara berkelanjutan.',
                 'unit' => 2,
-                'icon' => 'https://img.icons8.com/fluency-systems-regular/48/brainstorming.svg',
+                'icon' => 'https://img.icons8.com/fluency/96/mind-map.png',
             ],
             [
                 'title' => 'Kurikulum Self Dev',
                 'description' => 'Menjelaskan hubungan antara kurikulum dan pengembangan diri sebagai dasar dalam membentuk kompetensi dan karakter pendidik.',
                 'unit' => 4,
-                'icon' => 'https://img.icons8.com/fluency-systems-regular/48/training.svg',
+                'icon' => 'https://img.icons8.com/fluency/96/training.png',
             ],
 
             // ====== Additional Trainings ======
@@ -63,7 +63,7 @@ class ModulSeeder extends Seeder
                 'title' => 'Key Performance Indicators',
                 'description' => 'Materi ini bertujuan untuk membekali tenaga pendidik dan kependidikan dengan pemahaman tentang konsep, urgensi, dan penerapan Key Performance Indicators (KPI). Peserta diharapkan mampu memaknai KPI sebagai alat ukur kinerja yang strategis, serta menyusun indikator yang relevan, terukur, dan selaras dengan visi misi dan nilai yang dipegang SMK TI BAZMA.',
                 'unit' => 1,
-                'icon' => 'https://img.icons8.com/fluency/96/computer.png',
+                'icon' => 'https://img.icons8.com/fluency/96/combo-chart.png',
             ],
 
             [
@@ -72,7 +72,7 @@ class ModulSeeder extends Seeder
                 Guru akan belajar strategi pembelajaran berbasis TIK yang adaptif, sehingga dapat meningkatkan keterlibatan dan prestasi siswa
                 Secara keseluruhan, pelatihan ini bertujuan untuk meningkatkan kompetensi guru dalam memanfaatkan teknologi untuk menciptakan pembelajaran yang lebih inovatif dan efektif',
                 'unit' => 3,
-                'icon' => 'https://img.icons8.com/fluency/96/computer.png',
+                'icon' => 'https://img.icons8.com/fluency/96/artificial-intelligence.png',
             ],
         ];
 

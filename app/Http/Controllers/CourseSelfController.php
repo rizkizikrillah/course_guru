@@ -11,30 +11,30 @@ class CourseSelfController extends Controller
      * Tampilkan daftar Bab & Subbab CourseSelf
      */
     public function index()
-    {
-        $bab = CourseSelf::whereNull('parent_id')
-            ->with('children.children') // Bab → Subbab → Materi
-            ->orderBy('order')
-            ->get();
+{
+    $bab = CourseSelf::whereNull('parent_id')
+        ->with('children.children')
+        ->orderBy('order')
+        ->get();
 
-        // Tidak menggunakan progress, biarkan array kosong
-        $completedCourses3 = [];
+    // Tidak menggunakan progress, biarkan array kosong
+    $completedCoursesSelf = [];
 
-        return view('fe.courseself.course', [
-            'bab' => $bab,
-            'completedCourses3' => $completedCourses3,
-            'title' => null,
-            'content' => null,
-            'link' => null,
-            'videoLink' => null,
-            'prevCourseSelf' => null,
-            'nextCourseSelf' => null,
-            'activeSlug' => null,
-            'activeSection' => null,
-            'activeBabId' => null,
-            'activeSubbabId' => null,
-        ]);
-    }
+    return view('fe.courseself.course', [
+        'bab' => $bab,
+        'completedCoursesSelf' => $completedCoursesSelf,
+        'title' => null,
+        'content' => null,
+        'link' => null,
+        'videoLink' => null,
+        'prevcourseSelf' => null,
+        'nextcourseSelf' => null,
+        'activeSlug' => null,
+        'activeSection' => null,
+        'activeBabId' => null,
+        'activeSubbabId' => null,
+    ]);
+}
 
     /**
      * Tampilkan materi berdasarkan slug
@@ -63,11 +63,11 @@ class CourseSelfController extends Controller
             ->orderBy('order', 'asc')
             ->first();
 
-        $completedCourses3 = []; // tetap kosong, tidak menggunakan progress
+        $completedCoursesSelf = []; // tetap kosong, tidak menggunakan progress
 
         return view('fe.courseself.course', [
             'bab' => $bab,
-            'completedCourse3' => $completedCourses3,
+            'completedCoursesSelf' => $completedCoursesSelf,
             'activeSlug' => $slug,
             'activeSection' => $materi->section,
             'activeBabId' => $activeBabId,
@@ -77,9 +77,9 @@ class CourseSelfController extends Controller
             'content' => $materi->content,
             'link' => $materi->link ?? null,
             'videoLink' => $materi->videoLink ?? null,
-            'prevCourseSelf' => $prevCourseSelf,
-            'nextCourseSelf' => $nextCourseSelf,
-        ]);
+            'prevcourseSelf' => $prevCourseSelf,
+            'nextcourseSelf' => $nextCourseSelf,
+    ]);
     }
 
     /**

@@ -33,7 +33,10 @@
                         <!-- List Materi -->
                         <div x-show="openSubbab === {{ $subbab->id }}" class="ml-4 space-y-1 mt-1" x-collapse>
                             @foreach($subbab->children as $materi)
-                                    <a href="{{ route('course4.show', $materi->slug) }}">
+                                    <a href="{{ route('course4.show', $materi->slug) }}" class="flex items-center px-2 py-1 rounded-md transition
+                                                    {{ ($activeSlug ?? '') === $materi->slug
+                                ? 'text-blue-600 font-medium bg-blue-50'
+                                : 'text-gray-700 hover:text-blue-500' }}">
                                         📘 {{ $materi->title }}
                                     </a>
                             @endforeach

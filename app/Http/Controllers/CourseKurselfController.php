@@ -11,30 +11,30 @@ class CourseKurselfController extends Controller
      * Tampilkan daftar Bab & Subbab CourseKurself
      */
     public function index()
-    {
-        $bab = CourseKurself::whereNull('parent_id')
-            ->with('children.children') // Bab → Subbab → Materi
-            ->orderBy('order')
-            ->get();
+{
+    $bab = CourseKurself::whereNull('parent_id')
+        ->with('children.children')
+        ->orderBy('order')
+        ->get();
 
-        // Tidak menggunakan progress, biarkan array kosong
-        $completedCourses3 = [];
+    // Tidak menggunakan progress, biarkan array kosong
+    $completedCoursesKurself = [];
 
-        return view('fe.coursekurself.course', [
-            'bab' => $bab,
-            'completedCourses3' => $completedCourses3,
-            'title' => null,
-            'content' => null,
-            'link' => null,
-            'videoLink' => null,
-            'prevCourseKurself' => null,
-            'nextCourseKurself' => null,
-            'activeSlug' => null,
-            'activeSection' => null,
-            'activeBabId' => null,
-            'activeSubbabId' => null,
-        ]);
-    }
+    return view('fe.coursekurself.course', [
+        'bab' => $bab,
+        'completedCoursesKurself' => $completedCoursesKurself,
+        'title' => null,
+        'content' => null,
+        'link' => null,
+        'videoLink' => null,
+        'prevcourseKurself' => null,
+        'nextcourseKurself' => null,
+        'activeSlug' => null,
+        'activeSection' => null,
+        'activeBabId' => null,
+        'activeSubbabId' => null,
+    ]);
+}
 
     /**
      * Tampilkan materi berdasarkan slug
@@ -63,11 +63,11 @@ class CourseKurselfController extends Controller
             ->orderBy('order', 'asc')
             ->first();
 
-        $completedCourses3 = []; // tetap kosong, tidak menggunakan progress
+        $completedCoursesKurself = []; // tetap kosong, tidak menggunakan progress
 
         return view('fe.coursekurself.course', [
             'bab' => $bab,
-            'completedCourse3' => $completedCourses3,
+            'completedCoursesKurself' => $completedCoursesKurself,
             'activeSlug' => $slug,
             'activeSection' => $materi->section,
             'activeBabId' => $activeBabId,
@@ -77,9 +77,9 @@ class CourseKurselfController extends Controller
             'content' => $materi->content,
             'link' => $materi->link ?? null,
             'videoLink' => $materi->videoLink ?? null,
-            'prevCourseKurself' => $prevCourseKurself,
-            'nextCourseKurself' => $nextCourseKurself,
-        ]);
+            'prevcourseKurself' => $prevCourseKurself,
+            'nextcourseKurself' => $nextCourseKurself,
+    ]);
     }
 
     /**

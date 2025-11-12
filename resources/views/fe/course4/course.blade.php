@@ -23,7 +23,7 @@
     @include('fe.course4.navbar')
 
     {{-- WRAPPER --}}
-    <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCourses2 ?? []) }})"
+    <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCourses4 ?? []) }})"
         class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
 
         {{-- SIDEBAR --}}
@@ -47,8 +47,8 @@
                 activeLink: '{{ $link ?? '' }}',
                 activeVideo: '{{ $videoLink ?? '' }}',
                 progress: {{ $progressPercent ?? 0 }},
-                prevBab: @json($prevCourse4),
-                nextBab: @json($nextCourse4),
+                prevBab: @json($prevcourse4),
+                nextBab: @json($nextcourse4),
 
                 markComplete(babId) {
                     if (this.completedBab.includes(babId)) return;

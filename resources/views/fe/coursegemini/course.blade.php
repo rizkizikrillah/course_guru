@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LMS – Course gemini</title>
+    <title>LMS – coursegemini</title>
 
     {{-- Tailwind + Alpine --}}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,8 +23,8 @@
     @include('fe.coursegemini.navbar')
 
     {{-- WRAPPER --}}
-    <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCourses ?? []) }})"
-        class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
+    <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCourses3 ?? []) }})"
+        class="max-w-7xl mx-auto px-gemini py-6 grid grid-cols-12 gap-6">
 
         {{-- SIDEBAR --}}
         @include('fe.coursegemini.sidebar')
@@ -46,13 +46,12 @@
                 activeContent: `{!! addslashes($content ?? '') !!}`,
                 activeLink: '{{ $link ?? '' }}',
                 activeVideo: '{{ $videoLink ?? '' }}',
-                progress: 0,
-                prevBab: @json($prevCourseGemini),
-                nextBab: @json($nextCourseGemini),
+                progress: {{ $progressPercent ?? 0 }},
+                prevBab: @json($prevcourseGemini),
+                nextBab: @json($nextcourseGemini),
 
                 markComplete(babId) {
                     if (this.completedBab.includes(babId)) return;
-
                     fetch(`{{ url('coursegemini') }}/${babId}/complete`, {
                         method: 'POST',
                         headers: {
@@ -65,7 +64,7 @@
                             this.completedBab.push(babId);
                             this.progress = Math.round((this.completedBab.length / totalBab) * 100);
 
-                            // Auto Next
+                            // Auto next
                             if (this.nextBab) {
                                 window.location.href = `/coursegemini/${this.nextBab.slug}`;
                             }

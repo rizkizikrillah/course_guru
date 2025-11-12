@@ -17,18 +17,18 @@ class CourseGeminiController extends Controller
             ->orderBy('order')
             ->get();
 
-        // Tidak menggunakan progress
-        $completedCourses = [];
+        // Tidak menggunakan progress, biarkan array kosong
+        $completedCoursesGemini = [];
 
         return view('fe.coursegemini.course', [
             'bab' => $bab,
-            'completedCourses' => $completedCourses,
+            'completedCoursesGemini' => $completedCoursesGemini,
             'title' => null,
             'content' => null,
             'link' => null,
             'videoLink' => null,
-            'prevCourseGemini' => null,
-            'nextCourseGemini' => null,
+            'prevcourseGemini' => null,
+            'nextcourseGemini' => null,
             'activeSlug' => null,
             'activeSection' => null,
             'activeBabId' => null,
@@ -54,23 +54,20 @@ class CourseGeminiController extends Controller
         $activeSubbabId = $materi->parent_id;
         $activeBabId = $materi->parent ? $materi->parent->parent_id : null;
 
-        // ======================
-        // 🔹 Logika Prev & Next
-        // ======================
-        $prevCourseGemini = CourseGemini::where('order', '<', $materi->order)
-    ->orderBy('order', 'desc')
-    ->first();
+        // prev & next by order
+        $prevcourseGemini = CourseGemini::where('order', '<', $materi->order)
+            ->orderBy('order', 'desc')
+            ->first();
 
-$nextCourseGemini = CourseGemini::where('order', '>', $materi->order)
-    ->orderBy('order', 'asc')
-    ->first();
+        $nextcourseGemini = CourseGemini::where('order', '>', $materi->order)
+            ->orderBy('order', 'asc')
+            ->first();
 
-        // Tidak menggunakan progress tracking
-        $completedCourses = [];
+        $completedCoursesGemini = []; // tetap kosong, tidak menggunakan progress
 
         return view('fe.coursegemini.course', [
             'bab' => $bab,
-            'completedCourses' => $completedCourses,
+            'completedCoursesGemini' => $completedCoursesGemini,
             'activeSlug' => $slug,
             'activeSection' => $materi->section,
             'activeBabId' => $activeBabId,
@@ -80,8 +77,8 @@ $nextCourseGemini = CourseGemini::where('order', '>', $materi->order)
             'content' => $materi->content,
             'link' => $materi->link ?? null,
             'videoLink' => $materi->videoLink ?? null,
-            'prevCourseGemini' => $prevCourseGemini,
-            'nextCourseGemini' => $nextCourseGemini,
+            'prevcourseGemini' => $prevcourseGemini,
+            'nextcourseGemini' => $nextcourseGemini,
         ]);
     }
 
@@ -99,6 +96,7 @@ $nextCourseGemini = CourseGemini::where('order', '>', $materi->order)
         $answer = $request->input('answer');
 
         if ($answer === $course->quiz_answer) {
+            // Tidak menyimpan progress
             return redirect()->back()->with('success', 'Jawaban benar ✅');
         }
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LMS – Course Training</title>
+    <title>LMS – courseTraining</title>
 
     {{-- Tailwind + Alpine --}}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,17 +20,17 @@
 <body class="bg-gray-100 text-gray-800">
 
     {{-- NAVBAR --}}
-    @include('fe.coursetraining.navbar')
+    @include('fe.courseTraining.navbar')
 
     {{-- WRAPPER --}}
-    <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCourses ?? []) }})"
-        class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
+    <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCoursesTraining ?? []) }})"
+        class="max-w-7xl mx-auto px-Training py-6 grid grid-cols-12 gap-6">
 
         {{-- SIDEBAR --}}
-        @include('fe.coursetraining.sidebar')
+        @include('fe.courseTraining.sidebar')
 
         {{-- MAIN CONTENT --}}
-        @include('fe.coursetraining.content')
+        @include('fe.courseTraining.content')
 
     </div>
 
@@ -46,14 +46,13 @@
                 activeContent: `{!! addslashes($content ?? '') !!}`,
                 activeLink: '{{ $link ?? '' }}',
                 activeVideo: '{{ $videoLink ?? '' }}',
-                progress: 0,
-                prevBab: @json($prevCourseTraining),
-                nextBab: @json($nextCourseTraining),
+                progress: {{ $progressPercent ?? 0 }},
+                prevBab: @json($prevcourseTraining),
+                nextBab: @json($nextcourseTraining),
 
                 markComplete(babId) {
                     if (this.completedBab.includes(babId)) return;
-
-                    fetch(`{{ url('coursetraining') }}/${babId}/complete`, {
+                    fetch(`{{ url('courseTraining') }}/${babId}/complete`, {
                         method: 'POST',
                         headers: {
                             'X-CSRF-TOKEN': '{{ csrf_token() }}',
@@ -65,22 +64,22 @@
                             this.completedBab.push(babId);
                             this.progress = Math.round((this.completedBab.length / totalBab) * 100);
 
-                            // Auto Next
+                            // Auto next
                             if (this.nextBab) {
-                                window.location.href = `/coursetraining/${this.nextBab.slug}`;
+                                window.location.href = `/courseTraining/${this.nextBab.slug}`;
                             }
                         });
                 },
 
                 goPrev() {
                     if (this.prevBab) {
-                        window.location.href = `/coursetraining/${this.prevBab.slug}`;
+                        window.location.href = `/courseTraining/${this.prevBab.slug}`;
                     }
                 },
 
                 goNext() {
                     if (this.nextBab) {
-                        window.location.href = `/coursetraining/${this.nextBab.slug}`;
+                        window.location.href = `/courseTraining/${this.nextBab.slug}`;
                     }
                 }
             }

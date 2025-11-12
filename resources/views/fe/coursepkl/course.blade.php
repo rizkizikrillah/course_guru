@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LMS – coursepkl</title>
+    <title>LMS – coursePkl</title>
 
     {{-- Tailwind + Alpine --}}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,17 +20,17 @@
 <body class="bg-gray-100 text-gray-800">
 
     {{-- NAVBAR --}}
-    @include('fe.coursepkl.navbar')
+    @include('fe.coursePkl.navbar')
 
     {{-- WRAPPER --}}
-    <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCourses2 ?? []) }})"
-        class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
+    <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCoursesPkl ?? []) }})"
+        class="max-w-7xl mx-auto px-Pkl py-6 grid grid-cols-12 gap-6">
 
         {{-- SIDEBAR --}}
-        @include('fe.coursepkl.sidebar')
+        @include('fe.coursePkl.sidebar')
 
         {{-- MAIN CONTENT --}}
-        @include('fe.coursepkl.content')
+        @include('fe.coursePkl.content')
 
     </div>
 
@@ -47,12 +47,12 @@
                 activeLink: '{{ $link ?? '' }}',
                 activeVideo: '{{ $videoLink ?? '' }}',
                 progress: {{ $progressPercent ?? 0 }},
-                prevBab: @json($prevCoursePkl),
-                nextBab: @json($nextCoursePkl),
+                prevBab: @json($prevcoursePkl),
+                nextBab: @json($nextcoursePkl),
 
                 markComplete(babId) {
                     if (this.completedBab.includes(babId)) return;
-                    fetch(`{{ url('coursepkl') }}/${babId}/complete`, {
+                    fetch(`{{ url('coursePkl') }}/${babId}/complete`, {
                         method: 'POST',
                         headers: {
                             'X-CSRF-TOKEN': '{{ csrf_token() }}',
@@ -66,20 +66,20 @@
 
                             // Auto next
                             if (this.nextBab) {
-                                window.location.href = `/coursepkl/${this.nextBab.slug}`;
+                                window.location.href = `/coursePkl/${this.nextBab.slug}`;
                             }
                         });
                 },
 
                 goPrev() {
                     if (this.prevBab) {
-                        window.location.href = `/coursepkl/${this.prevBab.slug}`;
+                        window.location.href = `/coursePkl/${this.prevBab.slug}`;
                     }
                 },
 
                 goNext() {
                     if (this.nextBab) {
-                        window.location.href = `/coursepkl/${this.nextBab.slug}`;
+                        window.location.href = `/coursePkl/${this.nextBab.slug}`;
                     }
                 }
             }

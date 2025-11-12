@@ -11,30 +11,30 @@ class CourseTrainingController extends Controller
      * Tampilkan daftar Bab & Subbab CourseTraining
      */
     public function index()
-    {
-        $bab = CourseTraining::whereNull('parent_id')
-            ->with('children.children') // Bab → Subbab → Materi
-            ->orderBy('order')
-            ->get();
+{
+    $bab = CourseTraining::whereNull('parent_id')
+        ->with('children.children')
+        ->orderBy('order')
+        ->get();
 
-        // Tidak menggunakan progress
-        $completedCourses = [];
+    // Tidak menggunakan progress, biarkan array kosong
+    $completedCoursesTraining = [];
 
-        return view('fe.coursetraining.course', [
-            'bab' => $bab,
-            'completedCourses' => $completedCourses,
-            'title' => null,
-            'content' => null,
-            'link' => null,
-            'videoLink' => null,
-            'prevCourseTraining' => null,
-            'nextCourseTraining' => null,
-            'activeSlug' => null,
-            'activeSection' => null,
-            'activeBabId' => null,
-            'activeSubbabId' => null,
-        ]);
-    }
+    return view('fe.coursetraining.course', [
+        'bab' => $bab,
+        'completedCoursesTraining' => $completedCoursesTraining,
+        'title' => null,
+        'content' => null,
+        'link' => null,
+        'videoLink' => null,
+        'prevcourseTraining' => null,
+        'nextcourseTraining' => null,
+        'activeSlug' => null,
+        'activeSection' => null,
+        'activeBabId' => null,
+        'activeSubbabId' => null,
+    ]);
+}
 
     /**
      * Tampilkan materi berdasarkan slug
@@ -54,43 +54,20 @@ class CourseTrainingController extends Controller
         $activeSubbabId = $materi->parent_id;
         $activeBabId = $materi->parent ? $materi->parent->parent_id : null;
 
-        // ======================
-        // 🔹 Logika Prev & Next
-        // ======================
-        // Next dalam parent yang sama
-        $nextCourseTraining = CourseTraining::where('parent_id', $materi->parent_id)
-            ->where('order', '>', $materi->order)
-            ->orderBy('order', 'asc')
-            ->first();
-
-        // Jika tidak ada, coba cari di bab/subbab berikut
-        if (!$nextCourseTraining && $materi->parent) {
-            $nextCourseTraining = CourseTraining::where('parent_id', $materi->parent->parent_id)
-                ->where('order', '>', $materi->parent->order)
-                ->orderBy('order', 'asc')
-                ->first();
-        }
-
-        // Previous dalam parent yang sama
-        $prevCourseTraining = CourseTraining::where('parent_id', $materi->parent_id)
-            ->where('order', '<', $materi->order)
+        // prev & next by order
+        $prevCourseTraining = CourseTraining::where('order', '<', $materi->order)
             ->orderBy('order', 'desc')
             ->first();
 
-        // Kalau masih tidak ada, mungkin di parent sebelumnya
-        if (!$prevCourseTraining && $materi->parent) {
-            $prevCourseTraining = CourseTraining::where('parent_id', $materi->parent->parent_id)
-                ->where('order', '<', $materi->parent->order)
-                ->orderBy('order', 'desc')
-                ->first();
-        }
+        $nextCourseTraining = CourseTraining::where('order', '>', $materi->order)
+            ->orderBy('order', 'asc')
+            ->first();
 
-        // Tidak menggunakan progress tracking
-        $completedCourses = [];
+        $completedCoursesTraining = []; // tetap kosong, tidak menggunakan progress
 
         return view('fe.coursetraining.course', [
             'bab' => $bab,
-            'completedCourses' => $completedCourses,
+            'completedCoursesTraining' => $completedCoursesTraining,
             'activeSlug' => $slug,
             'activeSection' => $materi->section,
             'activeBabId' => $activeBabId,
@@ -100,9 +77,9 @@ class CourseTrainingController extends Controller
             'content' => $materi->content,
             'link' => $materi->link ?? null,
             'videoLink' => $materi->videoLink ?? null,
-            'prevCourseTraining' => $prevCourseTraining,
-            'nextCourseTraining' => $nextCourseTraining,
-        ]);
+            'prevcourseTraining' => $prevCourseTraining,
+            'nextcourseTraining' => $nextCourseTraining,
+    ]);
     }
 
     /**
@@ -119,6 +96,7 @@ class CourseTrainingController extends Controller
         $answer = $request->input('answer');
 
         if ($answer === $course->quiz_answer) {
+            // Tidak menyimpan progress
             return redirect()->back()->with('success', 'Jawaban benar ✅');
         }
 

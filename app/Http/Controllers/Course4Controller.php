@@ -3,36 +3,45 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course4;
-use App\Models\Course4Progress;
 use Illuminate\Http\Request;
 
 class Course4Controller extends Controller
 {
+    /**
+     * Tampilkan daftar Bab & Subbab Course4
+     */
     public function index()
-    {
-        $bab = Course4::whereNull('parent_id')
-            ->with('children.children') // Bab → Subbab → Materi
-            ->orderBy('order')
-            ->get();
+{
+    $bab = Course4::whereNull('parent_id')
+        ->with('children.children')
+        ->orderBy('order')
+        ->get();
 
-        return view('fe.course4.course', [
-            'bab' => $bab,
-            'title' => null,
-            'content' => null,
-            'link' => null,
-            'videoLink' => null,
-            'prevCourse4' => null,
-            'nextCourse4' => null,
-            'activeSlug' => null,
-            'activeSection' => null,
-            'activeBabId' => null,
-            'activeSubbabId' => null,
-        ]);
-    }
+    // Tidak menggunakan progress, biarkan array kosong
+    $completedCourses4 = [];
 
+    return view('fe.course4.course', [
+        'bab' => $bab,
+        'completedCourses4' => $completedCourses4,
+        'title' => null,
+        'content' => null,
+        'link' => null,
+        'videoLink' => null,
+        'prevcourse4' => null,
+        'nextcourse4' => null,
+        'activeSlug' => null,
+        'activeSection' => null,
+        'activeBabId' => null,
+        'activeSubbabId' => null,
+    ]);
+}
+
+    /**
+     * Tampilkan materi berdasarkan slug
+     */
     public function show($slug)
     {
-        $materi = Course4::with('parent.parent') // Ambil subbab dan bab-nya juga
+        $materi = Course4::with('parent.parent') // ambil subbab & bab
             ->where('slug', $slug)
             ->firstOrFail();
 
@@ -43,9 +52,9 @@ class Course4Controller extends Controller
 
         // Tentukan subbab & bab aktif
         $activeSubbabId = $materi->parent_id;
-        $activeBabId = $materi->parent?->parent_id ?? null;
+        $activeBabId = $materi->parent ? $materi->parent->parent_id : null;
 
-        // Prev & next by order
+        // prev & next by order
         $prevCourse4 = Course4::where('order', '<', $materi->order)
             ->orderBy('order', 'desc')
             ->first();
@@ -54,8 +63,11 @@ class Course4Controller extends Controller
             ->orderBy('order', 'asc')
             ->first();
 
+        $completedCourses4 = []; // tetap kosong, tidak menggunakan progress
+
         return view('fe.course4.course', [
             'bab' => $bab,
+            'completedCourses4' => $completedCourses4,
             'activeSlug' => $slug,
             'activeSection' => $materi->section,
             'activeBabId' => $activeBabId,
@@ -65,11 +77,14 @@ class Course4Controller extends Controller
             'content' => $materi->content,
             'link' => $materi->link ?? null,
             'videoLink' => $materi->videoLink ?? null,
-            'prevCourse4' => $prevCourse4,
-            'nextCourse4' => $nextCourse4,
-        ]);
+            'prevcourse4' => $prevCourse4,
+            'nextcourse4' => $nextCourse4,
+    ]);
     }
 
+    /**
+     * Check quiz (tidak menyimpan progress)
+     */
     public function checkQuiz(Request $request, $id)
     {
         $course = Course4::findOrFail($id);
@@ -80,8 +95,8 @@ class Course4Controller extends Controller
 
         $answer = $request->input('answer');
 
-        // Cek jawaban benar atau salah
-        if ($answer === $course->answer) {
+        if ($answer === $course->quiz_answer) {
+            // Tidak menyimpan progress
             return redirect()->back()->with('success', 'Jawaban benar ✅');
         }
 

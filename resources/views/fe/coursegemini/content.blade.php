@@ -86,7 +86,7 @@
             {{-- Tombol Prev --}}
             @isset($prevcourseGemini)
                     <a href="{{ route('coursegemini.show', $prevcourseGemini->slug) }}" class="px-4 py-2 rounded-lg transition
-                                {{ in_array($prevcourseGemini->id, $completedCourses3)
+                                {{ in_array($prevcourseGemini->id, $completedCoursesGemini)
                 ? 'bg-blue-600 text-white hover:bg-blue-700'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300' }}">
                         ← {{ $prevcourseGemini->title }}
@@ -98,7 +98,7 @@
             {{-- Tombol Next --}}
             @isset($nextcourseGemini)
                     <a href="{{ route('coursegemini.show', $nextcourseGemini->slug) }}" class="px-4 py-2 rounded-lg transition
-                                {{ in_array($nextcourseGemini->id, $completedCourses3)
+                                {{ in_array($nextcourseGemini->id, $completedCoursesGemini)
                 ? 'bg-blue-600 text-white hover:bg-blue-700'
                 : 'bg-gray-300 text-gray-600 hover:bg-gray-400' }}">
                         {{ $nextcourseGemini->title }} →

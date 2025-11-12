@@ -59,13 +59,12 @@
 
                 {{-- Konten utama materi --}}
                 {!! $content ?? '<p>
-                            Selamat datang di buku pembelajaran Artificial Intelligence (AI).
-Buku ini disusun untuk membantu pelajar SMA dan SMK mengenal teknologi AI dengan cara yang sederhana, terarah, dan menyenangkan. Melalui buku ini, kalian akan diajak memahami konsep dasar, mencoba praktik langsung, hingga melihat penerapan AI dalam kehidupan sehari-hari.</p>
-                            <p>Agar proses belajar lebih efektif, perhatikan tiga hal berikut:</p>
+                            Setelah Anda membaca materi, menonton video, mengerjakan aktivitas, dan memahami seluruh isi pembelajaran dalam bab ini, silakan lanjutkan dengan Latihan Pemahaman sebagai bentuk penyelesaian dan penguatan kompetensi pada bab ini.</p>
+                            <p>Latihan ini bertujuan untuk:</p>
                             <ol class="list-decimal ml-5">
-                                <li>Bacalah buku ini sesuai urutan bab, mulai dari dasar hingga penerapan, supaya pemahaman lebih kuat.</li>
-                                <li>Ikuti latihan dan contoh program yang tersedia. Dengan mencoba sendiri, pemahaman akan lebih cepat berkembang.</li>
-                                <li>Jangan takut salah atau menghadapi error. Kesalahan adalah bagian penting dari proses belajar.</li>
+                                <li>Mengukur tingkat pemahaman Anda terhadap konsep yang telah dipelajari.</li>
+                                <li>Melatih penerapan pengetahuan pada konteks nyata di kelas SMK.</li>
+                                <li>Menjadi dasar refleksi dan persiapan menuju bab berikutnya.</li>
                             </ol> 
                             <p class="mt-2">
                             👉 Kerjakan Latihan Pemahaman dengan sungguh-sungguh sebagai penutup bab ini.</p>' !!}
@@ -87,7 +86,7 @@ Buku ini disusun untuk membantu pelajar SMA dan SMK mengenal teknologi AI dengan
             {{-- Tombol Prev --}}
             @isset($prevcourse4)
                     <a href="{{ route('course4.show', $prevcourse4->slug) }}" class="px-4 py-2 rounded-lg transition
-                                {{ in_array($prevcourse4->id, $completedCourses2)
+                                {{ in_array($prevcourse4->id, $completedCourses4)
                 ? 'bg-blue-600 text-white hover:bg-blue-700'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300' }}">
                         ← {{ $prevcourse4->title }}
@@ -99,7 +98,7 @@ Buku ini disusun untuk membantu pelajar SMA dan SMK mengenal teknologi AI dengan
             {{-- Tombol Next --}}
             @isset($nextcourse4)
                     <a href="{{ route('course4.show', $nextcourse4->slug) }}" class="px-4 py-2 rounded-lg transition
-                                {{ in_array($nextcourse4->id, $completedCourses2)
+                                {{ in_array($nextcourse4->id, $completedCourses4)
                 ? 'bg-blue-600 text-white hover:bg-blue-700'
                 : 'bg-gray-300 text-gray-600 hover:bg-gray-400' }}">
                         {{ $nextcourse4->title }} →

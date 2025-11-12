@@ -12,7 +12,7 @@
                 <div class="p-4 bg-yellow-50 rounded-lg">
                     <h2 class="text-lg font-semibold mb-4">{{ $course->quiz_question }}</h2>
 
-                    <form method="POST" action="{{ route('courseself.quiz.check', $course->id) }}">
+                    <form method="POST" action="{{ route('courseKurself.quiz.check', $course->id) }}">
                         @csrf
                         @if(!empty($course->quiz_options) && is_array($course->quiz_options))
                             @foreach($course->quiz_options as $option)
@@ -41,7 +41,7 @@
                             if (result === "correct") {
                                 alert("🎉 Jawaban Anda benar!");
                                 window.location.href =
-                                    "{{ $nextcourseself ? route('courseself.show', $nextcourseself->slug) : route('courseself.index') }}";
+                                    "{{ $nextcourseKurself ? route('courseKurself.show', $nextcourseKurself->slug) : route('courseKurself.index') }}";
                             } else {
                                 alert("❌ Jawaban salah, coba lagi!");
                                 window.location.reload();
@@ -84,24 +84,24 @@
         {{-- Tombol Navigasi --}}
         <div class="p-6 flex justify-between border-t">
             {{-- Tombol Prev --}}
-            @isset($prevcourseself)
-                    <a href="{{ route('courseself.show', $prevcourseself->slug) }}" class="px-4 py-2 rounded-lg transition
-                                {{ in_array($prevcourseself->id, $completedCourses3)
+            @isset($prevcourseKurself)
+                    <a href="{{ route('coursekurself.show', $prevcourseKurself->slug) }}" class="px-4 py-2 rounded-lg transition
+                                {{ in_array($prevcourseKurself->id, $completedCoursesKurself)
                 ? 'bg-blue-600 text-white hover:bg-blue-700'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300' }}">
-                        ← {{ $prevcourseself->title }}
+                        ← {{ $prevcourseKurself->title }}
                     </a>
             @else
                 <span></span>
             @endisset
 
             {{-- Tombol Next --}}
-            @isset($nextcourseself)
-                    <a href="{{ route('courseself.show', $nextcourseself->slug) }}" class="px-4 py-2 rounded-lg transition
-                                {{ in_array($nextcourseself->id, $completedCourses3)
+            @isset($nextcourseKurself)
+                    <a href="{{ route('coursekurself.show', $nextcourseKurself->slug) }}" class="px-4 py-2 rounded-lg transition
+                                {{ in_array($nextcourseKurself->id, $completedCoursesKurself)
                 ? 'bg-blue-600 text-white hover:bg-blue-700'
                 : 'bg-gray-300 text-gray-600 hover:bg-gray-400' }}">
-                        {{ $nextcourseself->title }} →
+                        {{ $nextcourseKurself->title }} →
                     </a>
             @endisset
         </div>

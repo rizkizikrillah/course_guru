@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Course4 extends Model
+class course4 extends Model
 {
     use HasFactory;
 
@@ -32,12 +32,11 @@ class Course4 extends Model
 
     public function parent()
     {
-        return $this->belongsTo(Course4::class, 'parent_id');
+        return $this->belongsTo(course4::class, 'parent_id');
     }
 
     public function children()
     {
-        return $this->hasMany(Course4::class, 'parent_id')->orderBy('order');
+        return $this->hasMany(course4::class, 'parent_id')->orderBy('order');
     }
-
 }

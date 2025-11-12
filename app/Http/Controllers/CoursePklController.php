@@ -11,30 +11,30 @@ class CoursePklController extends Controller
      * Tampilkan daftar Bab & Subbab CoursePkl
      */
     public function index()
-    {
-        $bab = CoursePkl::whereNull('parent_id')
-            ->with('children.children') // Bab → Subbab → Materi
-            ->orderBy('order')
-            ->get();
+{
+    $bab = CoursePkl::whereNull('parent_id')
+        ->with('children.children')
+        ->orderBy('order')
+        ->get();
 
-        // Tidak menggunakan progress, biarkan array kosong
-        $completedCourses3 = [];
+    // Tidak menggunakan progress, biarkan array kosong
+    $completedCoursesPkl = [];
 
-        return view('fe.coursepkl.course', [
-            'bab' => $bab,
-            'completedCourses3' => $completedCourses3,
-            'title' => null,
-            'content' => null,
-            'link' => null,
-            'videoLink' => null,
-            'prevCoursePkl' => null,
-            'nextCoursePkl' => null,
-            'activeSlug' => null,
-            'activeSection' => null,
-            'activeBabId' => null,
-            'activeSubbabId' => null,
-        ]);
-    }
+    return view('fe.coursepkl.course', [
+        'bab' => $bab,
+        'completedCoursesPkl' => $completedCoursesPkl,
+        'title' => null,
+        'content' => null,
+        'link' => null,
+        'videoLink' => null,
+        'prevcoursePkl' => null,
+        'nextcoursePkl' => null,
+        'activeSlug' => null,
+        'activeSection' => null,
+        'activeBabId' => null,
+        'activeSubbabId' => null,
+    ]);
+}
 
     /**
      * Tampilkan materi berdasarkan slug
@@ -63,11 +63,11 @@ class CoursePklController extends Controller
             ->orderBy('order', 'asc')
             ->first();
 
-        $completedCourses3 = []; // tetap kosong, tidak menggunakan progress
+        $completedCoursesPkl = []; // tetap kosong, tidak menggunakan progress
 
         return view('fe.coursepkl.course', [
             'bab' => $bab,
-            'completedCourse3' => $completedCourses3,
+            'completedCoursesPkl' => $completedCoursesPkl,
             'activeSlug' => $slug,
             'activeSection' => $materi->section,
             'activeBabId' => $activeBabId,
@@ -77,9 +77,9 @@ class CoursePklController extends Controller
             'content' => $materi->content,
             'link' => $materi->link ?? null,
             'videoLink' => $materi->videoLink ?? null,
-            'prevCoursePkl' => $prevCoursePkl,
-            'nextCoursePkl' => $nextCoursePkl,
-        ]);
+            'prevcoursePkl' => $prevCoursePkl,
+            'nextcoursePkl' => $nextCoursePkl,
+    ]);
     }
 
     /**
