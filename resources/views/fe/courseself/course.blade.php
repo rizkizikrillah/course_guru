@@ -20,17 +20,17 @@
 <body class="bg-gray-100 text-gray-800">
 
     {{-- NAVBAR --}}
-    @include('fe.courseSelf.navbar')
+    @include('fe.courseself.navbar')
 
     {{-- WRAPPER --}}
     <div x-data="courseApp({{ $bab->count() }}, {{ json_encode($completedCoursesSelf ?? []) }})"
         class="max-w-7xl mx-auto px-Self py-6 grid grid-cols-12 gap-6">
 
         {{-- SIDEBAR --}}
-        @include('fe.courseSelf.sidebar')
+        @include('fe.courseself.sidebar')
 
         {{-- MAIN CONTENT --}}
-        @include('fe.courseSelf.content')
+        @include('fe.courseself.content')
 
     </div>
 

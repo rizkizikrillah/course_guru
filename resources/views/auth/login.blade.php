@@ -20,7 +20,7 @@
 <body class="bg-gray-100 text-gray-800">
     <div class="min-h-screen flex items-center justify-center">
         <div class="bg-white p-8 rounded-xl shadow-sm border max-w-md w-full">
-            <h1 class="text-2xl font-bold mb-6 text-center">Login ke Course</h1>
+            <h1 class="text-2xl font-bold mb-6 text-center">Login Course</h1>
 
             @if (session('status'))
                 <div class="mb-4 text-green-600">
