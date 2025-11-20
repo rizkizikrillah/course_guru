@@ -176,7 +176,7 @@ class CourseGeminiSeeder extends Seeder
             'order' => 12,
             'section' => 'bab-1',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab I ini, silahkan di klik link yang ada di bawah</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7hhliCLQdOo528U5EfvwHm7yWn0JBSla608flNW1GGQAJTA/viewform" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
+                <a href="https://forms.gle/HrhFCdQ2CAEhSzMT6" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
             'parent_id' => $subbab4->id,
         ]);
 
@@ -346,7 +346,7 @@ class CourseGeminiSeeder extends Seeder
             'order' => 25,
             'section' => 'bab-2',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab II ini, silahkan di klik link yang ada di bawah</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7hhliCLQdOo528U5EfvwHm7yWn0JBSla608flNW1GGQAJTA/viewform" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
+                <a href="https://forms.gle/FM99pDN7VwKoiUmj6" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
             'parent_id' => $subbab8->id,
         ]);
 
@@ -432,7 +432,7 @@ class CourseGeminiSeeder extends Seeder
             'order' => 31,
             'section' => 'bab-3',
             'content' => '<p>Bapak dan Ibu guru, silahkan mengikuti test untuk latihan pemahaman pada bab III ini, silahkan di klik link yang ada di bawah</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7hhliCLQdOo528U5EfvwHm7yWn0JBSla608flNW1GGQAJTA/viewform" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
+                <a href="https://forms.gle/kwPDc59Wk2RRyBQ57" target="_blank" class="text-blue-600 underline">📄 Link Latihan Pemahaman</a>',
             'parent_id' => $subbab10->id,
         ]);
     }
