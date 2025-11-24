@@ -19,6 +19,7 @@ class ModulController extends Controller
                 'Pembelajaran Sosial Emosional',
                 'Filosofi Pendidikan dan Pendidikan Nilai',
                 'Pembelajaran Buku AI untuk Siswa',
+                'Gemini Academy',
             ]);
         });
 
@@ -41,7 +42,6 @@ class ModulController extends Controller
         $modulsAdditional = $moduls->filter(function ($modul) {
             return in_array($modul->title, [
                 'Key Performance Indicators',
-                'Gemini Academy',
             ]);
         });
 

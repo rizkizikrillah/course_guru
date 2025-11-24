@@ -59,15 +59,10 @@
 
                 {{-- Konten utama materi --}}
                 {!! $content ?? '<p>
-                            Setelah Anda membaca materi, menonton video, mengerjakan aktivitas, dan memahami seluruh isi pembelajaran dalam bab ini, silakan lanjutkan dengan Latihan Pemahaman sebagai bentuk penyelesaian dan penguatan kompetensi pada bab ini.</p>
-                            <p>Latihan ini bertujuan untuk:</p>
-                            <ol class="list-decimal ml-5">
-                                <li>Mengukur tingkat pemahaman Anda terhadap konsep yang telah dipelajari.</li>
-                                <li>Melatih penerapan pengetahuan pada konteks nyata di kelas SMK.</li>
-                                <li>Menjadi dasar refleksi dan persiapan menuju bab berikutnya.</li>
-                            </ol> 
-                            <p class="mt-2">
-                            👉 Kerjakan Latihan Pemahaman dengan sungguh-sungguh sebagai penutup bab ini.</p>' !!}
+                            Pengantar : </p>
+                            <p>Mandiri sebagai nilai pertama yang disebutkan dalam core values dimaksudkan agar siswa mampu <b>mengenal diri sendiri</b> dan <b>terus berkembang</b> serta <b>tampil</b> pasca sekolah. Untuk </p>
+                            <p>Mandiri dalam KBBI berarti, dapat berdiri sendiri, atau tidak bergantung kepada orang lain. Untuk dapat sepenuhnya mengandalkan diri sendiri diperlukan pengetahuan tentang menemukan dan memanfaatkan potensi diri. Hal tersebut merupakan modal bagi diri untuk berkembang. Tetapi mengenal dan mengembangkan diri saja belum cukup. Penting bagi siswa untuk memiliki skill dan motivasi untuk bisa tampil dan membunyikan lonceng kehidupan kepada sekitar, agar diakui.</p>'
+                        !!}
             @endif
         </div>
 

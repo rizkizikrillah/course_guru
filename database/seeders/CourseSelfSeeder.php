@@ -23,6 +23,96 @@ class CourseSelfSeeder extends Seeder
             'parent_id' => null,
         ]);
 
+        $subbab1 = CourseSelf::create([
+            'title' => 'Menyampaikan materi self-dev',
+            'slug' => 'materi-self-dev',
+            'section' => 'bab-1',
+            'content' => null,
+            'parent_id' => $bab1->id,
+        ]);
+
+        CourseSelf::create([
+            'title'     => 'Penyampaian Materi Self Development',
+            'slug'      => 'penyampaian-materi-self',
+            'order'     => 1,
+            'section'   => 'bab-1',
+            'content'   => '
+        <p>
+            Dalam menyampaikan materi self-dev penting untuk :
+            <b>Memperkenalkan diri, as to why you are eligible to deliver this content</b>.
+            Tujuannya <b>membangun kredibilitas dan kepercayaan siswa</b>, sehingga siswa merasa perlu untuk memperhatikan materi.
+        </p>
+
+        <p>Apa sih yang penting dalam menyampaikan materi/bicara di depan umum? Apakah :</p>
+
+        <ol>
+            <li>Semangat, suara keras dan berintonasi</li>
+            <li>Pembawaan santai, ada humor dan membuat terhibur/tertawa</li>
+            <li>Supporting (fasilitas), slide bagus, audio bagus, well prepared</li>
+            <li>Interaksi dengan audiens, hadiah-hadiah</li>
+        </ol>
+
+        <p>Menurut Bapak dan Ibu yang manakah yang paling penting?</p>
+
+        <p>
+            Bahkan ternyata ada narasumber yang tidak melakukan keempat hal di atas,
+            namun mampu memikat dan mendapatkan perhatian audiens dengan cara-cara uniknya.
+        </p>
+
+        <p>
+            Ternyata hal yang paling penting dalam public speaking adalah
+            <b>“Be The Best Version of Yourself”</b>.
+            Hal yang membuat kita spesial adalah karena :
+        </p>
+
+        <ol>
+            <li>
+                Setiap Bapak/Ibu memiliki <b>Pengalaman</b> yang berbeda,
+                maka elaborasi pengalaman itu ke dalam materi-materi selfdev.
+                Sehingga experience belajarnya tidak monoton seperti nonton YouTube.
+            </li>
+            <li>
+                Setiap Bapak/Ibu memiliki karakter, keunikan, dan <b>Kelebihan</b> yang berbeda-beda.
+            </li>
+        </ol>
+
+        <p><b>Tips lainnya :</b></p>
+
+        <ol>
+            <li>
+                Gunakan bahasa kaummu : gunakan bahasa dan konteks yang dekat dengan siswa,
+                lakukan riset jika diperlukan.
+            </li>
+            <li>
+                Persiapan : persiapkan berbagai fasilitas (laptop/speaker/proyektor/ruangan)
+                sehingga tidak mengganggu jalannya kegiatan.
+            </li>
+            <li>
+                Jangan Dihapal! : apapun yang disampaikan pahami saja, jangan dihapal.
+            </li>
+            <li>
+                First Impression : berikan hal-hal menarik yang memorable ketika opening dan closing statement.
+                Bentuknya bisa gimmick, quotes, atau lainnya.
+            </li>
+            <li>
+                Good Management : sampaikan poin penting materi dengan memperhitungkan durasi dan supporting lainnya,
+                sehingga seluruh poin penting dapat tersampaikan dengan efisien.
+            </li>
+        </ol>
+
+        <p>
+            <a 
+                href="https://drive.google.com/file/d/1LTn4eMR15_NeJ7Fx4wwEJzddOSvT2Evf/view?usp=sharing"
+                target="_blank"
+                class="text-blue-600 underline"
+            >
+                🎥 Training of Trainer : Menit 00.00 - 21.30
+            </a>
+        </p>',
+            'parent_id' => $subbab1->id,
+        ]);
+
+
         $bab2 = CourseSelf::create([
             'title' => 'BAB II: Urgensi Self Development',
             'slug' => 'bab-2-Urgensi-Self',
@@ -31,25 +121,39 @@ class CourseSelfSeeder extends Seeder
             'parent_id' => null,
         ]);
 
-        // // === Subbab: Pengantar CASEL ===
-        // $subbab1 = CourseSelf::create([
-        //     'title' => 'Mengenal Diri Sendiri - Siapa Dirimu sebagai Guru?',
-        //     'slug' => 'mengenal-diri',
-        //     'section' => 'bab-1',
-        //     'content' => null,
-        //     'parent_id' => $bab1->id,
-        // ]);
+        $subbab2 = CourseSelf::create([
+            'title' => 'Objective dan Highlight Point ',
+            'slug' => 'objective-highlight',
+            'section' => 'bab-2',
+            'content' => null,
+            'parent_id' => $bab2->id,
+        ]);
+        CourseSelf::create([
+            'title' => 'Objective dan Highlight Point Self Development',
+            'slug' => 'objective-highlight-point-self',
+            'order' => 2,
+            'section' => 'bab-2',
+            'content' => '<p><b>Objective :</b></p>
+                    <ol>
+                        <li>Siswa memahami definisi dari self dev</li>
+                        <li>Siswa memahami urgensi pembelajaran self dev dan kenapa SMK TI BAZMA memfasilitasinya.</li>
+                    </ol>
 
-        // // === Materi di dalam Subbab ===
-        // CourseSelf::create([
-        //     'title' => 'Naskah Akademik dan Paparan Pembelajaran Mendalam',
-        //     'slug' => 'naskah-akademik-dan-paparan-pembelajaran',
-        //     'order' => 1,
-        //     'section' => 'bab-1',
-        //     'content' => '<p>Dokumen ini berisi naskah akademik dan paparan pembelajaran mendalam menuju pendidikan bermutu untuk semua. Dokumen-dokumen ini wajib dibaca agar peserta PPG mendapatkan pemahaman kerangka kerja pembelajaran mendalam sebagai landasan menyelesaikan jurnal pembelajaran.</p>
-        //         <a href="https://storage.googleapis.com/microlearning-public-production/document/5f9a7be1-74e6-4c10-a93a-314a6cb507fa-ACC%20Menteri_Nasmik_Pembelajaran%20Mendalam%20(2)_compressed.pdf" target="_blank" class="text-blue-600 underline">📄 Buku Ajar Akademik</a>
-        //         <a href="https://storage.googleapis.com/microlearning-public-production/document/f0931beb-ffa3-495d-939a-89abad76b75a-Paparan%20Pembelajaran%20Mendalam%20V2%20(1)%20(1).pdf" target="_blank" class="text-blue-600 underline">📄 Buku Paparan Mendalam</a>',
-        //     'parent_id' => $subbab1->id,
-        // ]);
+                    <p><b>Highlight point :</b></p>
+                        <ul>
+                            <li>Siswa SMK TI BAZMA sebagai penerima beasiswa seharusnya memiliki potensi yang lebih.</li>
+                            <li>Selfdev : sebuah usaha untuk menutup gap (kesenjangan) antara kondisi saat ini dengan potensi sesungguhnya melalui serangkaian kegiatan yang terukur</li>
+                            <li>Kunci dari self dev adalah mengenal dan mengelola potensi diri</li>
+                        </ul>
+                        <p>
+                            <a href="https://drive.google.com/drive/folders/1y6311izj22M6aXfHwap6TBY-bEokfWXw?usp=drive_link" target="_blank" class="text-blue-600 underline">📄 Power Point :</a>
+                        </p>
+            
+                        <p>
+                            <a href="https://drive.google.com/file/d/1LTn4eMR15_NeJ7Fx4wwEJzddOSvT2Evf/view?usp=sharing" target="_blank" class="text-blue-600 underline">🎥 Training of Trainer : Menit 21.30 - end.
+                            </a>
+                        </p>',
+            'parent_id' => $subbab2->id,
+        ]);
     }
 };

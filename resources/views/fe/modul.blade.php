@@ -24,6 +24,8 @@
                     <a href="{{ route('course4.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
                 @elseif($modul->title == 'Filosofi Pendidikan dan Pendidikan Nilai') 
                     <a href="{{ route('course3.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
+                @elseif($modul->title == 'Gemini Academy')
+                    <a href="{{ route('coursegemini.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
                 @else
                     <a href="{{ route('course.index') }}" class="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded">Masuk</a>
                 @endif
@@ -94,7 +96,7 @@
 
     {{-- BAGIAN 4: ADDITIONAL TRAININGS --}}
     <h1 class="text-xl font-bold mb-2 flex items-center">
-        <span class="w-6 h-6 bg-gray-500 text-white rounded-full flex items-center justify-center mr-2">4</span>
+        <span class="w-6 h-6 bg-gray-500 text-white rounded-full flex items-center djustify-center mr-2">4</span>
         Additional Trainings
     </h1>
 
@@ -109,8 +111,6 @@
                 </div>
                 @if($modul->title == 'Key Performance Indicators')
                     <a href="{{ route('coursetraining.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
-                @elseif($modul->title == 'Gemini Academy')
-                    <a href="{{ route('coursegemini.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
                 @endif
             </div>
 

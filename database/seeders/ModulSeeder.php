@@ -35,6 +35,14 @@ class ModulSeeder extends Seeder
                 'unit' => 1,
                 'icon' => 'https://img.icons8.com/fluency/96/artificial-intelligence.png',
             ],
+            [
+                'title' => 'Gemini Academy',
+                'description' => 'Melalui pelatihan ini, guru akan mampu menguasai teknologi AI, khususnya Gemini, dan mengaplikasikannya dalam pembelajaran
+                Guru akan belajar strategi pembelajaran berbasis TIK yang adaptif, sehingga dapat meningkatkan keterlibatan dan prestasi siswa
+                Secara keseluruhan, pelatihan ini bertujuan untuk meningkatkan kompetensi guru dalam memanfaatkan teknologi untuk menciptakan pembelajaran yang lebih inovatif dan efektif',
+                'unit' => 3,
+                'icon' => 'https://img.icons8.com/fluency/96/artificial-intelligence.png',
+            ],
 
             // ====== PKL ======
             [
@@ -66,14 +74,7 @@ class ModulSeeder extends Seeder
                 'icon' => 'https://img.icons8.com/fluency/96/combo-chart.png',
             ],
 
-            [
-                'title' => 'Gemini Academy',
-                'description' => 'Melalui pelatihan ini, guru akan mampu menguasai teknologi AI, khususnya Gemini, dan mengaplikasikannya dalam pembelajaran
-                Guru akan belajar strategi pembelajaran berbasis TIK yang adaptif, sehingga dapat meningkatkan keterlibatan dan prestasi siswa
-                Secara keseluruhan, pelatihan ini bertujuan untuk meningkatkan kompetensi guru dalam memanfaatkan teknologi untuk menciptakan pembelajaran yang lebih inovatif dan efektif',
-                'unit' => 3,
-                'icon' => 'https://img.icons8.com/fluency/96/artificial-intelligence.png',
-            ],
+            
         ];
 
         foreach ($moduls as $modul) {

@@ -58,16 +58,11 @@
                 @endif
 
                 {{-- Konten utama materi --}}
-                {!! $content ?? '<p>
-                            Setelah Anda membaca materi, menonton video, mengerjakan aktivitas, dan memahami seluruh isi pembelajaran dalam bab ini, silakan lanjutkan dengan Latihan Pemahaman sebagai bentuk penyelesaian dan penguatan kompetensi pada bab ini.</p>
-                            <p>Latihan ini bertujuan untuk:</p>
-                            <ol class="list-decimal ml-5">
-                                <li>Mengukur tingkat pemahaman Anda terhadap konsep yang telah dipelajari.</li>
-                                <li>Melatih penerapan pengetahuan pada konteks nyata di kelas SMK.</li>
-                                <li>Menjadi dasar refleksi dan persiapan menuju bab berikutnya.</li>
-                            </ol> 
-                            <p class="mt-2">
-                            👉 Kerjakan Latihan Pemahaman dengan sungguh-sungguh sebagai penutup bab ini.</p>' !!}
+                {!! $content ?? '<p>Pointer diskusi SMK TI BAZMA x Sanbersy : </p>
+                <a href="https://www.canva.com/design/DAGW_Hl4axY/r_VdhOstF1gPqjBC1WUg0Q/edit?utm_content=DAGW_Hl4axY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-blue-600 underline"> Klik di sini untuk membuka Pointer</a>
+                <p>Materi self development berperan sebagai pondasi yang memungkinkan siswa mencapai visi dan tujuan pendidikan di SMK TI BAZMA, yaitu menjadi pribadi yang sebelumnya dibantu sehingga bisa berdaya, mandiri dan bermanfaat bagi sekitar.</p>
+                <p>Berdasarkan World Economic Forum (2025), halangan terbesar yang akan terjadi ketika mengikuti perubahan zaman akibat, teknologi, ekonomi, demografi dan geoekonomi adalah kesenjangan skill. Sementara hardskills dalam bidang AI, big data, serta networks & cybersecurity akan mengalami pertumbuhan demand yang paling cepat, softskills seperti analytical thingking, cognitive skills, resilience, leadership dan collaboration akan tetap menjadi critical core skills. Kombinasi dari kedua skillsets tersebut akan diperlukan oleh berbagai pekerjaan kedepannya.</p>
+                <p>Menangani perubahan besar dan kesenjangan sosial ini memerlukan tindakan cepat dan kolaboratif dari stakeholder terkait (pemerintah, dunia usaha dan lembaga pendidikan). Prioritas utama yaitu menjembatani kesenjangan keterampilan, pelatihan ulang (reskilling) dan peningkatan keterampilan (upskilling) dan menciptakan jalur akses yang terbuka untuk menuju pekerjaan dan keterampilan dengan permintaan yang bertumbuh. Kurikulum khas self-development yang dilaksanakan sebagai ko-kurikuler diharapkan mampu membantu menjawab tantangan tersebut melalui program pembelajaran yang fleksibel dan dinamis menyesuaikan kondisi rill.</p>' !!}
             @endif
         </div>
 
