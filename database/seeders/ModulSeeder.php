@@ -70,11 +70,18 @@ class ModulSeeder extends Seeder
             [
                 'title' => 'Key Performance Indicators',
                 'description' => 'Materi ini bertujuan untuk membekali tenaga pendidik dan kependidikan dengan pemahaman tentang konsep, urgensi, dan penerapan Key Performance Indicators (KPI). Peserta diharapkan mampu memaknai KPI sebagai alat ukur kinerja yang strategis, serta menyusun indikator yang relevan, terukur, dan selaras dengan visi misi dan nilai yang dipegang SMK TI BAZMA.',
-                'unit' => 1,
+                'unit' => 2,
                 'icon' => 'https://img.icons8.com/fluency/96/combo-chart.png',
             ],
 
-            
+            [
+                'title' => 'Conselling Guidenance Trainings',
+                'description' => 'Modul ini bertujuan untuk membekali tenaga pendidik dan kependidikan dengan pengetahuan dan keterampilan dasar dalam memberikan bimbingan konseling kepada siswa. Peserta akan mempelajari konsep dasar bimbingan konseling, teknik komunikasi efektif, serta strategi dalam mengidentifikasi dan menangani berbagai permasalahan yang dihadapi siswa di lingkungan sekolah. Dengan modul ini, diharapkan tenaga pendidik dan kependidikan dapat menjadi fasilitator yang mampu mendukung perkembangan akademik, sosial, dan emosional siswa secara optimal.',
+                'unit' => 1,
+                'icon' => 'https://img.icons8.com/fluency/96/school.png',
+            ]
+
+
         ];
 
         foreach ($moduls as $modul) {

@@ -68,32 +68,5 @@ class CourseTrainingSeeder extends Seeder
                 <a href="https://www.canva.com/design/DAGvQWOXGhM/W53pQaVteXnYNF8IBYyN4Q/edit?utm_content=DAGvQWOXGhM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-blue-600 underline">📄 Link Drive</a>',
             'parent_id' => $subbab2->id,
         ]);
-
-        $bab3 = CourseTraining::create([
-            'title' => 'BAB III: Counseling Guidance Training',
-            'slug' => 'bab-3-pelatihan-bk',
-            'section' => 'bab-3',
-            'content' => null,
-            'parent_id' => null,
-        ]);
-
-         $subbab3 = CourseTraining::create([
-            'title' => 'Counseling Guidance Training SMK TI BAZMA',
-            'slug' => 'pelatihan-smktibazma-bk',
-            'section' => 'bab-3',
-            'content' => null,
-            'parent_id' => $bab3->id,
-        ]);
-
-        CourseTraining::create([
-            'title' => 'Counseling Guidance Training BK SMK TI BAZMA 25 Sept 2025',
-            'slug' => 'bk-pelatihan',
-            'order' => 3,
-            'section' => 'bab-3',
-            'content' => '<p>Pelatihan BK SMK TI BAZMA</p>
-                <a href="https://drive.google.com/drive/folders/1zxqvRlPbc0jqovHWdRWt6dOe2jMxs8q7?usp=sharing" target="_blank" class="text-blue-600 underline">📄 Link Drive</a>',
-            'parent_id' => $subbab3->id,
-        ]);
-
     }
 };

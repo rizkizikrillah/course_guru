@@ -42,6 +42,7 @@ class ModulController extends Controller
         $modulsAdditional = $moduls->filter(function ($modul) {
             return in_array($modul->title, [
                 'Key Performance Indicators',
+                'Conselling Guidenance Trainings',
             ]);
         });
 

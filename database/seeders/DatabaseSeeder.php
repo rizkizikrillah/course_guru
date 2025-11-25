@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Ristina', 'email' => 'ristina@smktibazma.sch.id', 'password' => 'ristinabazma1992'],
             ['name' => 'Parni', 'email' => 'parni@smktibazma.sch.id', 'password' => 'parnibazma1992'],
             ['name' => 'Nanang', 'email' => 'nanang@smktibazma.sch.id', 'password' => 'nanangbazma1992'],
+            ['name' => 'Gustini', 'email' => 'gustini@smktibazma.sch.id', 'password' => 'gustinibazma1992'],
         ];
 
         foreach ($users as $data) {
@@ -52,5 +53,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CourseTrainingSeeder::class);
         $this->call(CoursePklSeeder::class);
         $this->call(CourseGeminiSeeder::class);
+        $this->call(CourseBkSeeder::class);
     }
 }

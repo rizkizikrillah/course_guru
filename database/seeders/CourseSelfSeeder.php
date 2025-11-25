@@ -106,7 +106,7 @@ class CourseSelfSeeder extends Seeder
                 target="_blank"
                 class="text-blue-600 underline"
             >
-                🎥 Training of Trainer : Menit 00.00 - 21.30
+                Training of Trainer : 🎥video1669783817.mp4  Menit 00.00 - 21.30
             </a>
         </p>',
             'parent_id' => $subbab1->id,
@@ -146,11 +146,11 @@ class CourseSelfSeeder extends Seeder
                             <li>Kunci dari self dev adalah mengenal dan mengelola potensi diri</li>
                         </ul>
                         <p>
-                            <a href="https://drive.google.com/drive/folders/1y6311izj22M6aXfHwap6TBY-bEokfWXw?usp=drive_link" target="_blank" class="text-blue-600 underline">📄 Power Point :</a>
+                            <a href="https://drive.google.com/drive/folders/1y6311izj22M6aXfHwap6TBY-bEokfWXw?usp=drive_link" target="_blank" class="text-blue-600 underline">Power Point : 📄0_Urgensi Self Development</a>
                         </p>
             
                         <p>
-                            <a href="https://drive.google.com/file/d/1LTn4eMR15_NeJ7Fx4wwEJzddOSvT2Evf/view?usp=sharing" target="_blank" class="text-blue-600 underline">🎥 Training of Trainer : Menit 21.30 - end.
+                            <a href="https://drive.google.com/file/d/1LTn4eMR15_NeJ7Fx4wwEJzddOSvT2Evf/view?usp=sharing" target="_blank" class="text-blue-600 underline">Training of Trainer : 🎥video1669783817.mp4  Menit 21.30 - end.
                             </a>
                         </p>',
             'parent_id' => $subbab2->id,

@@ -14,6 +14,7 @@ use App\Http\Controllers\CourseKurselfController;
 use App\Http\Controllers\CourseTrainingController;
 use App\Http\Controllers\CoursePklController;
 use App\Http\Controllers\CourseGeminiController;
+use App\Http\Controllers\CourseBkController;
 
 // Root redirect
 Route::get('/', function () {
@@ -68,6 +69,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/coursegemini', [CourseGeminiController::class, 'index'])->name('coursegemini.index');
     Route::get('/coursegemini/{slug}', [CourseGeminiController::class, 'show'])->name('coursegemini.show');
+
+     Route::get('/coursebk', [CourseBkController::class, 'index'])->name('coursebk.index');
+    Route::get('/coursebk/{slug}', [CourseBkController::class, 'show'])->name('coursebk.show');
 
 
 // Halaman show per materi/bab Course4
