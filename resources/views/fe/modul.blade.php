@@ -111,8 +111,10 @@
                 </div>
                 @if($modul->title == 'Key Performance Indicators')
                     <a href="{{ route('coursetraining.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
-                @else($modul->title == 'Key Performance Indicators')
+                @elseif($modul->title == 'Key Performance Indicators')
                     <a href="{{ route('coursebk.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
+                @else($modul->title == 'Pengimbasan Gemini Pak Dzikri')
+                    <a href="{{ route('coursegemini2.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
                 @endif
             </div>
 

@@ -79,9 +79,14 @@ class ModulSeeder extends Seeder
                 'description' => 'Modul ini bertujuan untuk membekali tenaga pendidik dan kependidikan dengan pengetahuan dan keterampilan dasar dalam memberikan bimbingan konseling kepada siswa. Peserta akan mempelajari konsep dasar bimbingan konseling, teknik komunikasi efektif, serta strategi dalam mengidentifikasi dan menangani berbagai permasalahan yang dihadapi siswa di lingkungan sekolah. Dengan modul ini, diharapkan tenaga pendidik dan kependidikan dapat menjadi fasilitator yang mampu mendukung perkembangan akademik, sosial, dan emosional siswa secara optimal.',
                 'unit' => 1,
                 'icon' => 'https://img.icons8.com/fluency/96/school.png',
-            ]
+            ],
 
-
+            [
+                'title' => 'Pengimbasan Gemini Pak Dzikri',
+                'description' => 'Modul ini bertujuan untuk membekali tenaga pendidik dan kependidikan dengan pengetahuan dan keterampilan dalam memanfaatkan teknologi AI, khususnya Gemini, untuk menciptakan pembelajaran yang inovatif dan efektif. Peserta akan mempelajari konsep dasar AI, fitur-fitur Gemini, serta strategi pembelajaran berbasis TIK yang adaptif. Dengan modul ini, diharapkan tenaga pendidik dan kependidikan dapat meningkatkan kompetensi mereka dalam mengintegrasikan teknologi ke dalam proses pembelajaran guna meningkatkan keterlibatan dan prestasi siswa.',
+                'unit' => 1,
+                'icon' => 'https://img.icons8.com/fluency/96/artificial-intelligence.png',
+            ],
         ];
 
         foreach ($moduls as $modul) {

@@ -54,5 +54,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CoursePklSeeder::class);
         $this->call(CourseGeminiSeeder::class);
         $this->call(CourseBkSeeder::class);
+        $this->call(CourseGemini2Seeder::class);
     }
 }

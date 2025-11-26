@@ -43,6 +43,7 @@ class ModulController extends Controller
             return in_array($modul->title, [
                 'Key Performance Indicators',
                 'Conselling Guidenance Trainings',
+                'Pengimbasan Gemini Pak Dzikri',
             ]);
         });
 
