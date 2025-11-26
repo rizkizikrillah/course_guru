@@ -251,6 +251,154 @@ class CourseKurSelfSeeder extends Seeder
             'parent_id' => $subbab3->id,
         ]);
 
+        CourseKurself::create([
+            'title' => 'Permainan interaktif: Back to back drawing ',
+            'slug' => 'back-to-back-drawing',
+            'order' => 13,
+            'section' => 'bab-3',
+            'content' => '<ol>
+                            <li>(1). murid berpasangan (A & B)</li>
+                            <li>(2). duduk saling membelakangi</li>
+                            <li>(3). A diberikan kertas dengan gambar random yang sederhana</li>
+                            <li>(4). B diberikan kertas kosong</li>
+                            <li>(5). A mendeskripsikan gambar random</li>
+                            <li>(6). B Menggambar sesuai instruksi</li>
+                        </ol>
+            <p>ada 3 babak.</p>
+            <p>
+                babak pertama yang gambar hanya boleh menggambar
+            </p>
+            <p>
+                babak kedua yang gambar boleh nanya, tp hanya boleh dijawab yes or no
+            </p>
+            <p>
+                babak ketiga boleh nanya dan jawab bebas
+            </p>
+            <p?>
+                Makna : communication (listening & speaking)kejelasan dan runut instruksi itu sangat penting
+            </p>',
+            'parent_id' => $subbab3->id,
+        ]);
+
+        CourseKurself::create([
+            'title' => 'Permainan Interkatif: Tone Switch Challenge',
+            'slug' => 'tone-switch-challenge',
+            'order' => 14,
+            'section' => 'bab-3',
+            'content' => '<p>Durasi: 8–10 menit</p>
+            <p>
+                Cara main:
+            </p>
+            <p>
+                siswa dibagi menjadi 6 kelompok. satu perwakilan maju kedepan.
+            </p>
+            <p>
+                Guru siapkan 6 “tone card”:
+            </p>
+            <p>
+                Ramah, Malu, Cuek, Antusias, Murka, Ngambek, Tegas, Sok Cool, Kecewa, Sedih banget
+            </p>
+            <p>
+                Guru membacakan satu kalimat sederhana, misalnya:
+            </p>
+            <p>
+                “Kamu bisa jelaskan ini ke aku?”
+            </p>
+            <p>
+                “Ayo kerjakan tugas kelompok.”
+            </p>
+            <p>
+                “Tolong ambilkan buku itu."
+            </p>
+            <p>
+                siswa yang maju mengatakan ulang kalimat sederhananya, menggunakan tone card yg didapatkan
+            </p>
+            <p>
+                Teman-temannya menebak tone apa.
+            </p>
+            <p>
+                Tujuan: Melatih kesadaran bahwa how you say it sering lebih penting daripada what you say.
+            </p>
+            <ol>
+                <li>
+                    1. “Kalau ada masukan, saya sangat terbuka.”
+                </li>
+                <li>
+                    2. “Saya butuh waktu tambahan untuk mempersiapkan diri.”
+                </li>
+                <li>
+                    3. Tolong kirim file tugas… jangan ngilang lagi
+                </li>
+                <li>
+                    4. Bro, gorengan di kantin hari ini enak banget sumpah
+                </li>
+                <li>
+                    5. Eh, tadi makan siapa yang ngambil lauk gue
+                </li>
+                <li>
+                    6. Ada bagian yang masih belum saya tangkap, boleh dijelaskan lebih detail?
+                </li>
+                <li>
+                    7. Saya sudah kirimkan projectnya ya Pak, mohon dikoreksi
+                </li>
+                <li>
+                    8. iya, aku berubah. kamu jangan marah lagi ya
+                </li>
+                <li>
+                    9. saya sedang kesulitan, boleh pinjam 100
+                </li>
+                <li>
+                    10. kalau ada masukan, saya sangat terbuka
+                </li>
+                <li>
+                    11. bangunin gue, kalau guru udah masuk ya
+                </li>
+                <li>
+                    12. bro, salad bu yuli hari ini enak banget
+                </li>
+                <li>
+                    13. serius file tugas kita kehapus?
+                </li>
+                <li>
+                    14. Pak, izin follow up terkait file tugasnya
+                </li>
+                <li>
+                    15. Pak kalau berkenan, filenya boleh dikirim ulang, yang kemarin terhapus
+                </li>
+                <li>
+                    16. Jangan gini terus lah, digendong terus sama temen2 yang lain, ngga malu apa
+                </li>
+                <li>
+                    17. Lo baca chat ngga sih, misskom terus
+                </li>
+                <li>
+                    18. katanya mau kirim hari ini, kok belum juga
+                </li>
+                <li>
+                    19. saya janji ngga akan ngulangin kesalahan itu
+                </li>
+                <li>
+                    20. deadline udah semakin deket, lo masih santai banget
+                </li>
+                <li>
+                    21. ganteng banget, lagi pake baju gue ya
+                </li>
+                <li>
+                    22. sumpah, lo bilang mau kerjain tapi sampe sekarang gak jadi jadi
+                </li>
+                <li>
+                    23. jadi ngga sih rapat hari ini pak
+                </li>
+                <li>
+                    24. lo mau lanjut kerja atau gue yang kerjain
+                </li>
+                <li>
+                    25. Permisi kak, boleh saya duduk disini
+                </li>
+            </ol>',
+            'parent_id' => $subbab3->id,
+        ]);
+
         $subbab3 = CourseKurself::create([
             'title' => 'Interpersonal Skill',
             'slug' => 'mengenal-interpersonal-skill',
@@ -262,7 +410,7 @@ class CourseKurSelfSeeder extends Seeder
         CourseKurself::create([
             'title' => 'Materi Interpersonal Skill',
             'slug' => 'interpersonal-skill-materi',
-            'order' => 13,
+            'order' => 15,
             'section' => 'bab-3',
             'content' => '<p>Interpersonal skill adalah kemampuan untuk berinteraksi dan berkomunikasi dengan orang lain secara efektif. Kemampuan ini sangat penting dalam berbagai aspek kehidupan, baik dalam lingkungan sosial maupun profesional. Dengan memiliki interpersonal skill yang baik, seseorang dapat membangun hubungan yang positif, bekerja sama dengan orang lain, dan menyelesaikan konflik dengan lebih efektif.</p>
             <p>

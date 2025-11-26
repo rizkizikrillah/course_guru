@@ -109,12 +109,20 @@
                 <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
                     <span>📄 {{ $modul->unit }} Unit Pembelajaran</span>
                 </div>
-                @if($modul->title == 'Key Performance Indicators')
-                    <a href="{{ route('coursetraining.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
-                @elseif($modul->title == 'Key Performance Indicators')
-                    <a href="{{ route('coursebk.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
-                @else($modul->title == 'Pengimbasan Gemini Pak Dzikri')
-                    <a href="{{ route('coursegemini2.index') }}" class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk</a>
+                @if ($modul->title == 'Key Performance Indicators')
+                    <a href="{{ route('coursetraining.index') }}" 
+                        class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk
+                    </a>
+
+                @elseif ($modul->title == 'Pengimbasan Gemini Pak Dzikri')
+                    <a href="{{ route('coursegemini2.index') }}" 
+                        class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk
+                    </a>
+
+                @else
+                    <a href="{{ route('coursebk.index') }}" 
+                        class="inline-block px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded">Masuk
+                    </a>
                 @endif
             </div>
 

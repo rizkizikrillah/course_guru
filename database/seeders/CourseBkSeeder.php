@@ -16,7 +16,7 @@ class CourseBkSeeder extends Seeder
 
         // === Bab I ===
         $bab1 = CourseBk::create([
-            'title' => 'BAB III: Counseling Guidance Training',
+            'title' => 'BAB I: Counseling Guidance Training',
             'slug' => 'bab-1-pelatihan-bk',
             'section' => 'bab-1',
             'content' => null,

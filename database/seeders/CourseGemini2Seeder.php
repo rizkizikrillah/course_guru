@@ -17,7 +17,7 @@ class CourseGemini2Seeder extends Seeder
 
         // === Bab I ===
         $bab1 = CourseGemini2::create([
-            'title' => 'BAB I:Merancang Pembelajaran Inovatif dan Efektif dengan AI Gemini',
+            'title' => 'BAB I: Merancang Pembelajaran Inovatif dan Efektif dengan AI Gemini',
             'slug' => 'bab-1-merancang-pembelajaran-dengan-ai-gemini',
             'section' => 'bab-1',
             'content' => null,
