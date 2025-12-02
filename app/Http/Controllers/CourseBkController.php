@@ -12,7 +12,7 @@ class coursebkController extends Controller
      */
     public function index()
     {
-        $bab = coursebk::whereNull('parent_id')
+        $bab = Coursebk::whereNull('parent_id')
             ->with('children.children') // Bab → Subbab → Materi
             ->orderBy('order')
             ->get();
