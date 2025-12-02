@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\coursebk;
+use App\Models\CourseBk;
 use Illuminate\Http\Request;
 
 class coursebkController extends Controller
@@ -12,7 +12,7 @@ class coursebkController extends Controller
      */
     public function index()
     {
-        $bab = Coursebk::whereNull('parent_id')
+        $bab = CourseBk::whereNull('parent_id')
             ->with('children.children') // Bab → Subbab → Materi
             ->orderBy('order')
             ->get();
@@ -41,11 +41,11 @@ class coursebkController extends Controller
      */
     public function show($slug)
     {
-        $materi = coursebk::with('parent.parent') // ambil subbab & bab
+        $materi = CourseBk::with('parent.parent') // ambil subbab & bab
             ->where('slug', $slug)
             ->firstOrFail();
 
-        $bab = coursebk::whereNull('parent_id')
+        $bab = CourseBk::whereNull('parent_id')
             ->with('children.children')
             ->orderBy('order')
             ->get();
@@ -87,7 +87,7 @@ class coursebkController extends Controller
      */
     public function checkQuiz(Request $request, $id)
     {
-        $course = coursebk::findOrFail($id);
+        $course = CourseBk::findOrFail($id);
 
         if (!$course->is_quiz) {
             return redirect()->back()->with('error', 'Materi ini bukan quiz.');
